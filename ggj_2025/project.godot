@@ -17,9 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-<<<<<<< Updated upstream
-LevelChanger="*res://Globals/level_changer.gd"
-=======
 AppConfig="*res://addons/maaacks_menus_template/base/scenes/autoloads/app_config.tscn"
 SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_loader.tscn"
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
@@ -38,4 +35,3 @@ locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/
 
 disable_plugin_dialogues=true
 copy_path="res://.godot"
->>>>>>> Stashed changes
