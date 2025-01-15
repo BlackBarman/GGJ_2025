@@ -11,9 +11,31 @@ config_version=5
 [application]
 
 config/name="ggj_2025"
+run/main_scene="res://.godot/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< Updated upstream
 LevelChanger="*res://Globals/level_changer.gd"
+=======
+AppConfig="*res://addons/maaacks_menus_template/base/scenes/autoloads/app_config.tscn"
+SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_loader.tscn"
+ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
+ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/maaacks_menus_template/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_menus_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_menus_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_menus_template]
+
+disable_plugin_dialogues=true
+copy_path="res://.godot"
+>>>>>>> Stashed changes
