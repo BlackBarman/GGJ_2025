@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://LevelIngredients/bubble_base.gd" id="1_osm5m"]
 [ext_resource type="PackedScene" uid="uid://b8l5uu32d4toi" path="res://Art/TempBubbleBase.glb" id="2_g04wj"]
 
-[node name="BubbleBase" type="Node3D"]
+[node name="BubbleBase" type="Node3D" groups=["BubbleBaseGroup"]]
 script = ExtResource("1_osm5m")
 
 [node name="TempBubbleBase" parent="." instance=ExtResource("2_g04wj")]
