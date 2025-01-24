@@ -24,7 +24,7 @@ texture = ExtResource("1_o7hox")
 transform = Transform3D(21.62, 0, 0, 0, -5.1492e-07, 1, 0, -11.78, -4.37114e-08, 0, -1, 0)
 texture = ExtResource("1_50b8p")
 
-[node name="BubbleBase" parent="." instance=ExtResource("4_rhv53")]
+[node name="BubbleBase" parent="." groups=["BubbleBaseGroup"] instance=ExtResource("4_rhv53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 
 [node name="BubbleBase2" parent="." instance=ExtResource("4_rhv53")]
