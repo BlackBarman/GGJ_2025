@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df6gxirkpdbur"
-path.s3tc="res://.godot/imported/SpaceBackground.png-5c027fe958bf7091bb3f0cb913665453.s3tc.ctex"
+uid="uid://dcua7l7x4j8vs"
+path.s3tc="res://.godot/imported/GreyBackground.png-006d4c9203078aefc294fd6742e657f8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/SpaceBackground.png"
-dest_files=["res://.godot/imported/SpaceBackground.png-5c027fe958bf7091bb3f0cb913665453.s3tc.ctex"]
+source_file="res://Art/GreyBackground.png"
+dest_files=["res://.godot/imported/GreyBackground.png-006d4c9203078aefc294fd6742e657f8.s3tc.ctex"]
 
 [params]
 

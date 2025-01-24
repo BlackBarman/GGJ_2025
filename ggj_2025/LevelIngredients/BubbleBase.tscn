@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://qu7xa6wcyixa"]
+[gd_scene load_steps=3 format=3 uid="uid://qu7xa6wcyixa"]
 
 [ext_resource type="Script" path="res://LevelIngredients/bubble_base.gd" id="1_osm5m"]
+[ext_resource type="PackedScene" uid="uid://b8l5uu32d4toi" path="res://Art/TempBubbleBase.glb" id="2_g04wj"]
 
 [node name="BubbleBase" type="Node3D"]
 script = ExtResource("1_osm5m")
+
+[node name="TempBubbleBase" parent="." instance=ExtResource("2_g04wj")]
