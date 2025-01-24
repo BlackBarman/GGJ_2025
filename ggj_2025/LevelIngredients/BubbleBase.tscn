@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qu7xa6wcyixa"]
+
+[ext_resource type="Script" path="res://LevelIngredients/bubble_base.gd" id="1_osm5m"]
+
+[node name="BubbleBase" type="Node3D"]
+script = ExtResource("1_osm5m")

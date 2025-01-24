@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ggj_2025"
-run/main_scene="res://.godot/scenes/opening/opening_with_logo.tscn"
+run/main_scene="res://Levels/level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbkid55m6imlg"]
+
+[ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
+[ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Textures/SpaceBackground.png" id="1_50b8p"]
+[ext_resource type="Texture2D" uid="uid://dcua7l7x4j8vs" path="res://Textures/GreyBackground.png" id="1_o7hox"]
+
+[node name="MainLevel" type="Node3D"]
+script = ExtResource("1_7dfin")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4, 0)
+
+[node name="Floor" type="Sprite3D" parent="."]
+transform = Transform3D(150, 0, 0, 0, -3.49691e-06, 1, 0, -80, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("1_o7hox")
+
+[node name="Blackbackground" type="Sprite3D" parent="."]
+transform = Transform3D(21.62, 0, 0, 0, -5.1492e-07, 1, 0, -11.78, -4.37114e-08, 0, -1, 0)
+texture = ExtResource("1_50b8p")
