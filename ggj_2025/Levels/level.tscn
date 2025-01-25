@@ -1,15 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=6 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
 [ext_resource type="Texture2D" uid="uid://dcua7l7x4j8vs" path="res://Art/GreyBackground.png" id="1_o7hox"]
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
-[ext_resource type="Script" path="res://LevelIngredients/user_interface.gd" id="5_qt7vw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmecw"]
-bg_color = Color(0.408913, 0.742192, 0.398924, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8tmj"]
+[ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 
 [node name="MainLevel" type="Node3D" node_paths=PackedStringArray("bubble_bases")]
 script = ExtResource("1_7dfin")
@@ -35,127 +30,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 [node name="BubbleBase3" parent="." instance=ExtResource("4_rhv53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
 
-[node name="UserInterface" type="Control" parent="." node_paths=PackedStringArray("main_level")]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1158.0
-offset_bottom = 648.0
-script = ExtResource("5_qt7vw")
+[node name="UserInterface" parent="." node_paths=PackedStringArray("main_level") instance=ExtResource("5_fkdie")]
 main_level = NodePath("..")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Score" type="Label" parent="UserInterface/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 6
-theme_override_font_sizes/font_size = 40
-text = "SCORE: 0"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/VBoxContainer"]
-layout_mode = 2
-
-[node name="HSeparator" type="HSeparator" parent="UserInterface/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="BubbleBase1" type="Label" parent="UserInterface/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 25
-text = "Bubble Base 1"
-
-[node name="BubbleBase1Size" type="ProgressBar" parent="UserInterface/VBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(180, 30)
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
-max_value = 300.0
-value = 100.0
-show_percentage = false
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="UserInterface/VBoxContainer"]
-layout_mode = 2
-
-[node name="HSeparator" type="HSeparator" parent="UserInterface/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="BubbleBase2" type="Label" parent="UserInterface/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 25
-text = "Bubble Base 2
-"
-
-[node name="BubbleBase2Size" type="ProgressBar" parent="UserInterface/VBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(180, 30)
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
-max_value = 300.0
-value = 100.0
-show_percentage = false
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="UserInterface/VBoxContainer"]
-layout_mode = 2
-
-[node name="HSeparator" type="HSeparator" parent="UserInterface/VBoxContainer/VBoxContainer3"]
-layout_mode = 2
-
-[node name="BubbleBase3" type="Label" parent="UserInterface/VBoxContainer/VBoxContainer3"]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 25
-text = "Bubble Base 3
-"
-
-[node name="BubbleBase3Size" type="ProgressBar" parent="UserInterface/VBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(180, 30)
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
-max_value = 300.0
-value = 100.0
-show_percentage = false
-
-[node name="GameOverScreen" type="ColorRect" parent="UserInterface"]
-visible = false
-layout_mode = 0
-offset_left = 449.0
-offset_top = 173.0
-offset_right = 749.0
-offset_bottom = 473.0
-color = Color(0.140447, 0.140447, 0.140447, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/GameOverScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -127.5
-offset_right = 103.0
-offset_bottom = 131.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GameOverLabel" type="Label" parent="UserInterface/GameOverScreen/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "GAME OVER!"
-horizontal_alignment = 1
-
-[node name="FinalScoreLabel" type="Label" parent="UserInterface/GameOverScreen/VBoxContainer"]
-layout_mode = 2
-text = "FINAL SCORE: "
-
-[node name="TryAgainButton" type="Button" parent="UserInterface/GameOverScreen/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_i8tmj")
-text = "TRY AGAIN"
-
-[connection signal="pressed" from="UserInterface/GameOverScreen/VBoxContainer/TryAgainButton" to="UserInterface" method="_on_try_again_button_pressed"]
