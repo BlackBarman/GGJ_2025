@@ -59,7 +59,7 @@ camera = NodePath("../SubViewport/Camera3D")
 cast_camera = NodePath("../castCamera")
 
 [node name="castCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 30, 0)
+transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, -3, 14, 0)
 projection = 1
 size = 6.303
 
@@ -69,7 +69,7 @@ size = Vector2i(322, 182)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" node_paths=PackedStringArray("character", "main_level")]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 14.1507, 0)
+transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, -3, 14, 0)
 projection = 1
 current = true
 size = 10.0
@@ -102,6 +102,7 @@ script = ExtResource("9_f8ko0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.972684, -0.232059, -0.00582203, -0.0680426, -0.309002, 0.948624, -0.221936, -0.922316, -0.316351, 1.19252, 4.48798, -5.65305)
+shadow_enabled = true
 
 [node name="Walls" type="StaticBody3D" parent="."]
 transform = Transform3D(1, -1.02445e-08, 7.10133e-09, 0, 1, 0, 1.10595e-08, 0, 1, -0.100346, 0.338141, -0.0844989)
@@ -141,7 +142,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
-visible = false
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
