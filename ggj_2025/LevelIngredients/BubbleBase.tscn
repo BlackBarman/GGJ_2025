@@ -1,9 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://qu7xa6wcyixa"]
+[gd_scene load_steps=5 format=3 uid="uid://qu7xa6wcyixa"]
 
 [ext_resource type="Script" path="res://LevelIngredients/bubble_base.gd" id="1_osm5m"]
 [ext_resource type="PackedScene" uid="uid://b8l5uu32d4toi" path="res://Art/TempBubbleBase.glb" id="2_g04wj"]
+[ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="3_bobeq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_12u7b"]
+radius = 1.0
 
 [node name="BubbleBase" type="Node3D" groups=["BubbleBaseGroup"]]
 script = ExtResource("1_osm5m")
 
 [node name="TempBubbleBase" parent="." instance=ExtResource("2_g04wj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("SphereShape3D_12u7b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bobeq")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
