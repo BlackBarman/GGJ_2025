@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccwkw3gk2obrk"]
+[gd_scene load_steps=9 format=3 uid="uid://ccwkw3gk2obrk"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_beiag"]
 [ext_resource type="Script" path="res://weapon.gd" id="2_ery3h"]
@@ -11,6 +11,9 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_ee17j"]
 size = Vector3(1.035, 0.265, 0.36)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_igwpj"]
+size = Vector3(1, 1.45618, 0.841858)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
@@ -46,3 +49,12 @@ transform = Transform3D(1, -1.51827e-05, 0.000453504, 1.51667e-05, 1, 8.31857e-0
 
 [node name="BubbleThrower" parent="body" instance=ExtResource("4_2jctd")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.399753, 0.00691921, 0.0122284)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00100327, 0.0624454, -0.04425)
+shape = SubResource("BoxShape3D_igwpj")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 
+var lives = 10
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -48,3 +49,20 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("EnemyGroup"):
+		lives -= 1
+		print("ahiwa che male! vite rimaste: "+ str(lives))
+		if lives == 0 :
+			queue_free()
+	pass # Replace with function body.
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area.is_in_group("EnemyCollisionGroup"):
+		lives -= 1
+		print("ahiwa che male! vite rimaste: "+ str(lives))
+	if lives == 0 :
+		queue_free()
+	pass # Replace with function body.

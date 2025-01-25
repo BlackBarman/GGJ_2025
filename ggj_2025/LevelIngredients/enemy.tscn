@@ -1,12 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc1glweosc7j1"]
+[gd_scene load_steps=5 format=3 uid="uid://cc1glweosc7j1"]
 
 [ext_resource type="Script" path="res://LevelIngredients/enemy.gd" id="1_oapgt"]
 [ext_resource type="PackedScene" uid="uid://dvbcpyo2wiwqo" path="res://Art/Blockout/Mesh_TestEnemy.gltf" id="2_ep0hf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q38e3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j3jo5"]
 
 [node name="Enemy" type="CharacterBody3D" groups=["EnemyGroup", "enemies"]]
 script = ExtResource("1_oapgt")
+
+[node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622102, 0)
+shape = SubResource("CapsuleShape3D_q38e3")
 
 [node name="DetectionCollider" type="Area3D" parent="."]
 visible = false
