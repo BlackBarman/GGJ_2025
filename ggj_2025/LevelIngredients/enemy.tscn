@@ -7,7 +7,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2cb3j"]
 albedo_color = Color(1, 0, 1, 1)
 
-[node name="Enemy" type="CharacterBody3D" groups=["enemies"]]
+[node name="Enemy" type="CharacterBody3D" groups=["EnemyGroup", "enemies"]]
 script = ExtResource("1_oapgt")
 
 [node name="DetectionCollider" type="Area3D" parent="."]
