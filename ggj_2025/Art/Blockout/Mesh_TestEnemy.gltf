@@ -1,0 +1,191 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Mesh_Enemy_Teststatic",
+            "children": [
+                1
+            ],
+            "translation": [
+                -0.01168772578239441,
+                0.7119990587234497,
+                0.0
+            ]
+        },
+        {
+            "name": "Mesh_Enemy_Teststatic:PIV",
+            "mesh": 0,
+            "translation": [
+                0.01168772578239441,
+                -0.7119990587234497,
+                0.0
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Mesh_Enemy_TeststaticShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {}
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Mesh_Enemy_TeststaticShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 2220,
+            "max": [
+                1107
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Mesh_Enemy_TeststaticShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1108,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Mesh_Enemy_TeststaticShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 13296,
+            "componentType": 5126,
+            "count": 1108,
+            "max": [
+                0.3920674920082093,
+                1.4239981174468997,
+                0.3920674920082093
+            ],
+            "min": [
+                -0.4154429435729981,
+                0.0,
+                -0.3920674920082093
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Mesh_Enemy_TeststaticShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1108,
+            "max": [
+                0.9616001844406128,
+                0.9946844577789308,
+                0.998958170413971,
+                1.0
+            ],
+            "min": [
+                -0.989635705947876,
+                -0.9993377923965454,
+                -0.9999996423721314,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Mesh_Enemy_TeststaticShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1108,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.023514509201049809
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_TestEnemy/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 53184,
+            "byteLength": 4440,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_TestEnemy/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 17728,
+            "byteLength": 26592,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_TestEnemy/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 17728,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_TestEnemy/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 44320,
+            "byteLength": 8864,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_TestEnemy/data",
+            "byteLength": 57624,
+            "uri": "Mesh_TestEnemy0.bin"
+        }
+    ]
+}
