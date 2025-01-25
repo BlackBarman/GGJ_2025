@@ -14,7 +14,7 @@ size = Vector3(1.035, 0.265, 0.36)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c6sac"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0267968, -4.30333, 0.39074)
 script = ExtResource("1_beiag")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=9 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
+[ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5l56y"]
 size = Vector3(50, 1, 28)
@@ -36,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 camera = NodePath("Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 12, 0)
+transform = Transform3D(-0.100964, 0.803882, 0.586157, -0.135252, -0.594788, 0.792423, 0.985654, 0.00072716, 0.168779, 5.17837, 12, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -47,3 +48,5 @@ shape = SubResource("BoxShape3D_5l56y")
 [node name="Floor" type="Sprite3D" parent="StaticBody3D"]
 transform = Transform3D(155, 0, 0, 0, -3.71547e-06, 1, 0, -85, -4.37114e-08, 0, -0.5, 0)
 texture = ExtResource("1_o7hox")
+
+[node name="EnemyManager" parent="." instance=ExtResource("7_0sfro")]
