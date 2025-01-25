@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7kjke7mmdjoa"]
+
+[ext_resource type="Environment" uid="uid://c8c3php67l6no" path="res://part01/env.tres" id="1_a0voy"]
+[ext_resource type="Material" uid="uid://b7j5oxgnrsrf1" path="res://part01/mat_plane.tres" id="2_wibba"]
+[ext_resource type="Material" uid="uid://bhpf8kge1w13i" path="res://part01/mat_cube.tres" id="3_ffbty"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kxf5v"]
+size = Vector2(10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1dtpy"]
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_a0voy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.34202, 0.574648, -0.743507, 0, 0.791223, 0.611527, 0.939693, -0.209154, 0.270614, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_wibba")
+mesh = SubResource("PlaneMesh_kxf5v")
+skeleton = NodePath("../..")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("3_ffbty")
+mesh = SubResource("BoxMesh_1dtpy")
+skeleton = NodePath("../..")

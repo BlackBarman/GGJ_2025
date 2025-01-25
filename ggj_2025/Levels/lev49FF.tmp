@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
 [ext_resource type="Texture2D" uid="uid://dgwuvt75nv5h" path="res://Art/sandTexture.png" id="6_ihoce"]
+[ext_resource type="Script" path="res://Levels/camera_3d.gd" id="6_rjptt"]
 [ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
+[ext_resource type="Script" path="res://LevelIngredients/PixelShader/part01/camera_rig.gd" id="10_qplty"]
 [ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/camera_3d_texel_snapped3.gd" id="11_qwil3"]
-[ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/display2.gd" id="12_4p5wp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5l56y"]
 size = Vector3(385.814, 1, 386.665)
@@ -22,9 +23,6 @@ texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1xfiw"]
 size = Vector3(1, 13.9551, 61.3906)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_6nv4m"]
-viewport_path = NodePath("SubViewport")
 
 [node name="MainLevel" type="Node3D" node_paths=PackedStringArray("bubble_bases")]
 script = ExtResource("1_7dfin")
@@ -45,42 +43,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16595, -0.623795, -4.19299)
 
 [node name="UserInterface" parent="." node_paths=PackedStringArray("main_level", "bubble_base_1", "bubble_base_2", "bubble_base_3") instance=ExtResource("5_fkdie")]
-z_index = 1
 main_level = NodePath("..")
 bubble_base_1 = NodePath("../BubbleBase")
 bubble_base_2 = NodePath("../BubbleBase2")
 bubble_base_3 = NodePath("../BubbleBase3")
 
-[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "cast_camera") groups=["PlayerGroup"] instance=ExtResource("6_81aot")]
+[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") groups=["PlayerGroup"] instance=ExtResource("6_81aot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 collision_layer = 13
 collision_mask = 13
-camera = NodePath("../SubViewport/Camera3D")
-cast_camera = NodePath("../castCamera")
-
-[node name="castCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 30, 0)
-projection = 1
-size = 6.303
+camera = NodePath("../Camera3D")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
 size = Vector2i(322, 182)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport" node_paths=PackedStringArray("character", "main_level")]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 14.1507, 0)
+[node name="CameraRig" type="Node3D" parent="SubViewport"]
+transform = Transform3D(0.707107, -0.353553, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353553, 0.612373, 0, 0, 0)
+script = ExtResource("10_qplty")
+circular_radius = 0.5
+circular_speed = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.53674e-07, 20)
 projection = 1
 current = true
 size = 10.0
 far = 100.0
 script = ExtResource("11_qwil3")
-character = NodePath("../../CharacterBody3D")
-speed = 10.0
-main_level = NodePath("../..")
+snap = null
+snap_objects = null
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("character", "main_level")]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -0.32163, 13.5, 0)
+script = ExtResource("6_rjptt")
+character = NodePath("../CharacterBody3D")
+main_level = NodePath("..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_mask = 257
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19974, -1, -0.489334)
@@ -139,21 +140,3 @@ shape = SubResource("BoxShape3D_1xfiw")
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/CollisionShape3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
-
-[node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
-visible = false
-clip_contents = true
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-script = ExtResource("12_4p5wp")
-viewport = NodePath("../SubViewport")
-
-[node name="Sprite2D" type="Sprite2D" parent="Display"]
-texture = SubResource("ViewportTexture_6nv4m")
-centered = false

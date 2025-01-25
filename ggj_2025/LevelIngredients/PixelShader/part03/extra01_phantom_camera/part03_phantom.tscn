@@ -1,0 +1,109 @@
+[gd_scene load_steps=17 format=3 uid="uid://doat3rmlwpv7d"]
+
+[ext_resource type="Script" path="res://part02/settings_notice2.gd" id="1_ucwj8"]
+[ext_resource type="PackedScene" uid="uid://c7kjke7mmdjoa" path="res://part01/world.tscn" id="2_rjhqb"]
+[ext_resource type="Material" uid="uid://c7xavcy54jyrx" path="res://part03/mat_cube_moving.tres" id="3_8f66i"]
+[ext_resource type="Script" path="res://part03/extra01_phantom_camera/camera_3d_texel_snapper.gd" id="5_wyj7m"]
+[ext_resource type="Script" path="res://part03/extra01_phantom_camera/display2_phantom.gd" id="6_c2161"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="6_gerdo"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_o2wil"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_73aad"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="8_vtwo8"]
+[ext_resource type="Shader" path="res://part02/pixel_art_upscale.gdshader" id="9_up4ao"]
+
+[sub_resource type="GDScript" id="GDScript_jtgt5"]
+script/source = "extends Node3D
+
+@export var speed: float = 45.0
+
+
+func _process(delta: float) -> void:
+	var cube := (get_child(0) as Node3D)
+	var rot := cube.global_rotation
+	rotate_y(deg_to_rad(speed) * delta)
+	cube.global_rotation = rot
+"
+
+[sub_resource type="BoxMesh" id="BoxMesh_drxdm"]
+
+[sub_resource type="Resource" id="Resource_4savu"]
+script = ExtResource("7_73aad")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="Resource" id="Resource_cysu8"]
+script = ExtResource("8_vtwo8")
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+projection = 1
+fov = 75.0
+size = 10.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 100.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oehph"]
+shader = ExtResource("9_up4ao")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2gejb"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Part03-Phantom" type="Node3D"]
+script = ExtResource("1_ucwj8")
+
+[node name="World" parent="." instance=ExtResource("2_rjhqb")]
+
+[node name="Rotating" type="Node3D" parent="."]
+script = SubResource("GDScript_jtgt5")
+
+[node name="MovingCube" type="MeshInstance3D" parent="Rotating" groups=["snap"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.5)
+material_override = ExtResource("3_8f66i")
+mesh = SubResource("BoxMesh_drxdm")
+skeleton = NodePath("")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(322, 182)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(0.707106, -0.353553, 0.612372, 0, 0.866024, 0.499999, -0.707106, -0.353553, 0.612372, 12.2474, 11, 14.7474)
+projection = 1
+current = true
+size = 10.0
+far = 100.0
+
+[node name="PhantomCameraHost" type="Node" parent="SubViewport/Camera3D"]
+script = ExtResource("6_o2wil")
+
+[node name="Camera3DTexelSnapper" type="Node" parent="SubViewport/Camera3D"]
+script = ExtResource("5_wyj7m")
+
+[node name="PhantomCamera3D" type="Node3D" parent="SubViewport" node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(0.707106, -0.353553, 0.612372, 0, 0.866024, 0.499999, -0.707106, -0.353553, 0.612372, 12.2474, 11, 14.7474)
+script = ExtResource("6_gerdo")
+follow_mode = 5
+follow_target = NodePath("../../Rotating/MovingCube")
+tween_resource = SubResource("Resource_4savu")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_cysu8")
+follow_damping = true
+follow_damping_value = Vector3(1, 1, 1)
+follow_distance = 20.0
+spring_length = 20.0
+
+[node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("6_c2161")
+viewport = NodePath("../SubViewport")
+
+[node name="Sprite2D" type="Sprite2D" parent="Display"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_oehph")
+texture = SubResource("ViewportTexture_2gejb")
+centered = false

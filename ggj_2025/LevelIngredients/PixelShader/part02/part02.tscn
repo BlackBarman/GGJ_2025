@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dusboal27haub"]
+
+[ext_resource type="Script" path="res://part02/settings_notice2.gd" id="1_4dug7"]
+[ext_resource type="PackedScene" uid="uid://c7kjke7mmdjoa" path="res://part01/world.tscn" id="1_ep64y"]
+[ext_resource type="Script" path="res://part01/camera_rig.gd" id="2_chchu"]
+[ext_resource type="Script" path="res://part02/camera_3d_texel_snapped2.gd" id="3_vgh83"]
+[ext_resource type="Script" path="res://part02/display.gd" id="4_6ag5h"]
+[ext_resource type="Shader" path="res://part02/pixel_art_upscale.gdshader" id="5_flve1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oehph"]
+shader = ExtResource("5_flve1")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2gejb"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Part02" type="Node3D"]
+script = ExtResource("1_4dug7")
+
+[node name="World" parent="." instance=ExtResource("1_ep64y")]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(322, 182)
+render_target_update_mode = 4
+
+[node name="CameraRig" type="Node3D" parent="SubViewport"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 0, 0)
+script = ExtResource("2_chchu")
+circular_radius = 0.5
+circular_speed = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.25849e-07, 0, -2.98023e-08, 1, 0, 9.53674e-07, 20)
+projection = 1
+current = true
+size = 10.0
+far = 100.0
+script = ExtResource("3_vgh83")
+
+[node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_6ag5h")
+viewport = NodePath("../SubViewport")
+
+[node name="Sprite2D" type="Sprite2D" parent="Display"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_oehph")
+texture = SubResource("ViewportTexture_2gejb")
+centered = false

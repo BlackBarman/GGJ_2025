@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwljdik21usnb"]
+
+[ext_resource type="PackedScene" uid="uid://c7kjke7mmdjoa" path="res://part01/world.tscn" id="1_bk7vc"]
+[ext_resource type="Script" path="res://part01/settings_notice.gd" id="1_u71ul"]
+[ext_resource type="Script" path="res://part01/camera_rig.gd" id="2_ob2k5"]
+[ext_resource type="Script" path="res://part01/camera_3d_texel_snapped.gd" id="3_77ded"]
+
+[node name="Part01" type="Node3D"]
+script = ExtResource("1_u71ul")
+
+[node name="World" parent="." instance=ExtResource("1_bk7vc")]
+
+[node name="CameraRig" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 0, 0)
+script = ExtResource("2_ob2k5")
+circular_radius = 0.5
+circular_speed = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+projection = 1
+current = true
+size = 10.0
+far = 100.0
+script = ExtResource("3_77ded")

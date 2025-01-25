@@ -51,17 +51,11 @@ bubble_base_1 = NodePath("../BubbleBase")
 bubble_base_2 = NodePath("../BubbleBase2")
 bubble_base_3 = NodePath("../BubbleBase3")
 
-[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "cast_camera") groups=["PlayerGroup"] instance=ExtResource("6_81aot")]
+[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") groups=["PlayerGroup"] instance=ExtResource("6_81aot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 collision_layer = 13
 collision_mask = 13
 camera = NodePath("../SubViewport/Camera3D")
-cast_camera = NodePath("../castCamera")
-
-[node name="castCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 30, 0)
-projection = 1
-size = 6.303
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
@@ -80,7 +74,6 @@ speed = 10.0
 main_level = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_mask = 257
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19974, -1, -0.489334)
@@ -141,7 +134,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
-visible = false
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -155,5 +147,7 @@ script = ExtResource("12_4p5wp")
 viewport = NodePath("../SubViewport")
 
 [node name="Sprite2D" type="Sprite2D" parent="Display"]
+position = Vector2(-2, -0.999969)
+scale = Vector2(3.5989, 3.5989)
 texture = SubResource("ViewportTexture_6nv4m")
 centered = false
