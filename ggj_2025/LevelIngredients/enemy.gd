@@ -25,6 +25,9 @@ func _get_new_bubble():
 func _physics_process(delta: float) -> void:	
 	if nav_agent.is_target_reachable():
 		return
+	else:
+		_get_new_bubble()
+		
 	if target_bubble ==null:
 		_get_new_bubble()
 	
