@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=8 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmecw"]
 bg_color = Color(0.408913, 0.742192, 0.398924, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8tmj"]
 
 [node name="MainLevel" type="Node3D" node_paths=PackedStringArray("bubble_bases")]
 script = ExtResource("1_7dfin")
@@ -24,7 +26,7 @@ texture = ExtResource("1_o7hox")
 transform = Transform3D(21.62, 0, 0, 0, -5.1492e-07, 1, 0, -11.78, -4.37114e-08, 0, -1, 0)
 texture = ExtResource("1_50b8p")
 
-[node name="BubbleBase" parent="." groups=["BubbleBaseGroup"] instance=ExtResource("4_rhv53")]
+[node name="BubbleBase" parent="." instance=ExtResource("4_rhv53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 
 [node name="BubbleBase2" parent="." instance=ExtResource("4_rhv53")]
@@ -36,8 +38,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
 [node name="UserInterface" type="Control" parent="." node_paths=PackedStringArray("main_level")]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1158.0
+offset_bottom = 648.0
 script = ExtResource("5_qt7vw")
 main_level = NodePath("..")
 
@@ -117,3 +119,43 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
 max_value = 300.0
 value = 100.0
 show_percentage = false
+
+[node name="GameOverScreen" type="ColorRect" parent="UserInterface"]
+visible = false
+layout_mode = 0
+offset_left = 449.0
+offset_top = 173.0
+offset_right = 749.0
+offset_bottom = 473.0
+color = Color(0.140447, 0.140447, 0.140447, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -127.5
+offset_right = 103.0
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="UserInterface/GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER!"
+horizontal_alignment = 1
+
+[node name="FinalScoreLabel" type="Label" parent="UserInterface/GameOverScreen/VBoxContainer"]
+layout_mode = 2
+text = "FINAL SCORE: "
+
+[node name="TryAgainButton" type="Button" parent="UserInterface/GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i8tmj")
+text = "TRY AGAIN"
+
+[connection signal="pressed" from="UserInterface/GameOverScreen/VBoxContainer/TryAgainButton" to="UserInterface" method="_on_try_again_button_pressed"]

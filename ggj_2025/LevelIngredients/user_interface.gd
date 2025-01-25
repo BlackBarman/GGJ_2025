@@ -24,3 +24,13 @@ func _update_progress_bars() -> void:
 	$VBoxContainer/VBoxContainer/BubbleBase1Size.value = main_level.bubble_bases[0].scale.x*100
 	$VBoxContainer/VBoxContainer2/BubbleBase2Size.value = main_level.bubble_bases[1].scale.x*100
 	$VBoxContainer/VBoxContainer3/BubbleBase3Size.value = main_level.bubble_bases[2].scale.x*100
+
+
+func _reveal_game_over_screen() -> void:
+	$GameOverScreen.visible = true
+	var cleaned_score = int(main_level.score)
+	$GameOverScreen/VBoxContainer/FinalScoreLabel.text = "FINAL SCORE: " + str(cleaned_score)
+
+
+func _on_try_again_button_pressed() -> void:
+	get_tree().reload_current_scene()

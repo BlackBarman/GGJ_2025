@@ -30,5 +30,5 @@ func _decrease_size(damage : float) -> void:
 	scale.y -= damage
 	scale.z -= damage
 	if scale.x <= min_size:
+		SignalBus.BubbleBasePopped.emit(self)
 		queue_free() 
-	
