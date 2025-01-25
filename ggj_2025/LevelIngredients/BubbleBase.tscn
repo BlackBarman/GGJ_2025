@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://LevelIngredients/bubble_base.gd" id="1_osm5m"]
 [ext_resource type="PackedScene" uid="uid://b8l5uu32d4toi" path="res://Art/TempBubbleBase.glb" id="2_g04wj"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_12u7b"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kivfl"]
 radius = 1.0
+height = 4.0
 
 [node name="BubbleBase" type="Node3D" groups=["BubbleBaseGroup"]]
 script = ExtResource("1_osm5m")
@@ -14,4 +15,4 @@ script = ExtResource("1_osm5m")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("SphereShape3D_12u7b")
+shape = SubResource("CapsuleShape3D_kivfl")

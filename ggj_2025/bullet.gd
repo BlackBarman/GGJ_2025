@@ -2,6 +2,7 @@ extends Node3D
 class_name BaseBullet
 
 @export var bullet_speed : float
+@export var friendly_damage : float = 0.3
 
 var bullet_dir : Vector3
 
@@ -19,6 +20,9 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("EnemyGroup"):
 		body.queue_free()
 		queue_free()
+	elif body.get_parent().is_in_group("BubbleBaseGroup"):
+		pass
+		body.get_parent()._decrease_size(friendly_damage)
 
 func _on_timer_timeout() -> void:
 	queue_free()
