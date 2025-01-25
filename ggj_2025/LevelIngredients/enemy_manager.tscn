@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c55d1hd8xdqse"]
+
+[ext_resource type="Script" path="res://LevelIngredients/enemy_manager.gd" id="1_lhhgp"]
+[ext_resource type="PackedScene" uid="uid://cc1glweosc7j1" path="res://LevelIngredients/enemy.tscn" id="2_wn8kv"]
+
+[sub_resource type="Curve3D" id="Curve3D_oh1qr"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5, 0, -5, 0, 0, 0, 0, 0, 0, 5, 0, -5, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, -5, 0, 5, 0, 0, 0, 0, 0, 0, -5, 0, -5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="EnemyManager" type="Node3D"]
+script = ExtResource("1_lhhgp")
+enemy_scene = ExtResource("2_wn8kv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.88
+autostart = true
+
+[node name="SpawnLocation" type="Path3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+curve = SubResource("Curve3D_oh1qr")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
