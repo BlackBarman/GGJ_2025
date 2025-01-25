@@ -1,0 +1,3579 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                30,
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Rootctr",
+            "children": [
+                29,
+                1
+            ]
+        },
+        {
+            "name": "hip",
+            "children": [
+                2
+            ],
+            "translation": [
+                -0.0019059570040553809,
+                0.7020142674446106,
+                0.03348058462142944
+            ],
+            "rotation": [
+                0.04346953332424164,
+                0.0,
+                0.0,
+                0.9990547299385072
+            ]
+        },
+        {
+            "name": "hip:PIV",
+            "children": [
+                6,
+                3
+            ],
+            "translation": [
+                0.0,
+                -0.7331222891807556,
+                0.0
+            ]
+        },
+        {
+            "name": "blade",
+            "children": [
+                4
+            ],
+            "translation": [
+                0.0,
+                0.7331222891807556,
+                0.0
+            ]
+        },
+        {
+            "name": "blade:PIV",
+            "children": [
+                5
+            ],
+            "translation": [
+                0.0,
+                -0.7331222891807556,
+                0.0
+            ]
+        },
+        {
+            "name": "Blade",
+            "translation": [
+                -0.00011000099766533822,
+                0.8998324275016785,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.7071067690849304,
+                0.7071067690849304
+            ]
+        },
+        {
+            "name": "Hip",
+            "children": [
+                19,
+                9,
+                7
+            ],
+            "translation": [
+                0.0,
+                0.7602717876434326,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.7071067690849304,
+                0.7071067690849304
+            ]
+        },
+        {
+            "name": "Tip:SSC",
+            "children": [
+                8
+            ],
+            "translation": [
+                0.5421891212463379,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Tip",
+            "rotation": [
+                0.0,
+                0.0,
+                -0.7071067690849304,
+                0.7071067690849304
+            ]
+        },
+        {
+            "name": "Leg_L1:SSC",
+            "children": [
+                10
+            ],
+            "translation": [
+                -0.1982531845569611,
+                -0.021002188324928285,
+                -0.20846672356128696
+            ]
+        },
+        {
+            "name": "Leg_L1",
+            "children": [
+                11
+            ],
+            "rotation": [
+                0.24108320474624637,
+                0.6762994527816773,
+                0.663869321346283,
+                0.20922577381134034
+            ]
+        },
+        {
+            "name": "Leg_L2:SSC",
+            "children": [
+                12
+            ],
+            "translation": [
+                0.2070368528366089,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_L2",
+            "children": [
+                13
+            ],
+            "rotation": [
+                0.8902135491371155,
+                -0.0,
+                0.45554351806640627,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_L3:SSC",
+            "children": [
+                14
+            ],
+            "translation": [
+                0.2218849211931229,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_L3",
+            "children": [
+                15
+            ],
+            "rotation": [
+                0.0,
+                0.9355029463768004,
+                0.0,
+                -0.3533189296722412
+            ]
+        },
+        {
+            "name": "Leg_L4:SSC",
+            "children": [
+                16
+            ],
+            "translation": [
+                0.486909419298172,
+                0.0,
+                -0.016291040927171708
+            ]
+        },
+        {
+            "name": "Leg_L4",
+            "children": [
+                17
+            ],
+            "rotation": [
+                0.9469649791717528,
+                -0.0,
+                0.3213368356227875,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_L5:SSC",
+            "children": [
+                18
+            ],
+            "translation": [
+                0.08633796125650406,
+                0.0,
+                0.012559257447719574
+            ]
+        },
+        {
+            "name": "Leg_L5",
+            "rotation": [
+                0.0,
+                0.0415467731654644,
+                0.0,
+                0.9991365671157836
+            ]
+        },
+        {
+            "name": "Leg_R1:SSC",
+            "children": [
+                20
+            ],
+            "translation": [
+                -0.1982531845569611,
+                -0.021002188324928285,
+                0.20800000429153446
+            ]
+        },
+        {
+            "name": "Leg_R1",
+            "children": [
+                21
+            ],
+            "rotation": [
+                0.2703954875469208,
+                0.6664180159568787,
+                0.652506411075592,
+                0.2387649267911911
+            ]
+        },
+        {
+            "name": "Leg_R2:SSC",
+            "children": [
+                22
+            ],
+            "translation": [
+                0.2070368528366089,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R2",
+            "children": [
+                23
+            ],
+            "rotation": [
+                0.8926924467086792,
+                -0.0,
+                0.4506664574146271,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R3:SSC",
+            "children": [
+                24
+            ],
+            "translation": [
+                0.2218849211931229,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R3",
+            "children": [
+                25
+            ],
+            "rotation": [
+                0.0,
+                0.9411589503288268,
+                0.0,
+                -0.33796417713165285
+            ]
+        },
+        {
+            "name": "Leg_R4:SSC",
+            "children": [
+                26
+            ],
+            "translation": [
+                0.471336305141449,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R4",
+            "children": [
+                27
+            ],
+            "rotation": [
+                0.9469649791717528,
+                -0.0,
+                0.3213368356227875,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R5:SSC",
+            "children": [
+                28
+            ],
+            "translation": [
+                0.11467118561267852,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_R5",
+            "rotation": [
+                0.0,
+                0.08299258351325989,
+                0.0,
+                0.9965501427650452
+            ]
+        },
+        {
+            "name": "Root",
+            "rotation": [
+                0.0,
+                0.0,
+                0.7071067690849304,
+                0.7071067690849304
+            ]
+        },
+        {
+            "name": "Enemy",
+            "children": [
+                31
+            ],
+            "translation": [
+                0.0,
+                -0.9589979648590088,
+                0.0
+            ]
+        },
+        {
+            "name": "Enemy:PIV",
+            "children": [
+                54,
+                52,
+                50,
+                48,
+                46,
+                44,
+                42,
+                40,
+                38,
+                36,
+                34,
+                32
+            ],
+            "translation": [
+                0.0,
+                0.9589979648590088,
+                0.0
+            ]
+        },
+        {
+            "name": "Leg_03_R",
+            "children": [
+                33
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                0.20800000429153446
+            ]
+        },
+        {
+            "name": "Leg_03_R:PIV",
+            "mesh": 0,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 0
+        },
+        {
+            "name": "Leg_03_L",
+            "children": [
+                35
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                -0.20846672356128696
+            ]
+        },
+        {
+            "name": "Leg_03_L:PIV",
+            "mesh": 1,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 1
+        },
+        {
+            "name": "Leg_02_R",
+            "children": [
+                37
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                0.20800000429153446
+            ]
+        },
+        {
+            "name": "Leg_02_R:PIV",
+            "mesh": 2,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 2
+        },
+        {
+            "name": "Leg_02_L",
+            "children": [
+                39
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                -0.20846672356128696
+            ]
+        },
+        {
+            "name": "Leg_02_L:PIV",
+            "mesh": 3,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 3
+        },
+        {
+            "name": "Leg_01_R",
+            "children": [
+                41
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                0.20800000429153446
+            ]
+        },
+        {
+            "name": "Leg_01_R:PIV",
+            "mesh": 4,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 4
+        },
+        {
+            "name": "Leg_01_L",
+            "children": [
+                43
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                -0.20846672356128696
+            ]
+        },
+        {
+            "name": "Leg_01_L:PIV",
+            "mesh": 5,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 5
+        },
+        {
+            "name": "Knee_R",
+            "children": [
+                45
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                0.20800000429153446
+            ]
+        },
+        {
+            "name": "Knee_R:PIV",
+            "mesh": 6,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 6
+        },
+        {
+            "name": "Knee_L",
+            "children": [
+                47
+            ],
+            "translation": [
+                0.0,
+                0.4681286811828614,
+                -0.20846672356128696
+            ]
+        },
+        {
+            "name": "Knee_L:PIV",
+            "mesh": 7,
+            "translation": [
+                2.660158157348633,
+                0.0,
+                0.0
+            ],
+            "skin": 7
+        },
+        {
+            "name": "Head_02",
+            "children": [
+                49
+            ],
+            "translation": [
+                0.0,
+                0.9606350660324096,
+                0.0
+            ],
+            "scale": [
+                0.24226966500282288,
+                0.24226966500282288,
+                0.24226966500282288
+            ]
+        },
+        {
+            "name": "Head_02:PIV",
+            "mesh": 8,
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "skin": 8
+        },
+        {
+            "name": "Head_01",
+            "children": [
+                51
+            ],
+            "translation": [
+                0.0,
+                0.9606350660324096,
+                0.0
+            ],
+            "scale": [
+                0.24226966500282288,
+                0.24226966500282288,
+                0.24226966500282288
+            ]
+        },
+        {
+            "name": "Head_01:PIV",
+            "mesh": 9,
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "skin": 9
+        },
+        {
+            "name": "Body",
+            "children": [
+                53
+            ],
+            "translation": [
+                0.0,
+                0.7111281752586365,
+                0.0
+            ],
+            "scale": [
+                0.24226966500282288,
+                0.24226966500282288,
+                0.24226966500282288
+            ]
+        },
+        {
+            "name": "Body:PIV",
+            "mesh": 10,
+            "translation": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "skin": 10
+        },
+        {
+            "name": "Blade",
+            "mesh": 11,
+            "translation": [
+                0.0,
+                0.7540171146392822,
+                0.0
+            ],
+            "scale": [
+                0.297497034072876,
+                0.018062300980091096,
+                0.297497034072876
+            ],
+            "skin": 11
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Leg_03_RShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 1,
+                        "NORMAL": 2,
+                        "POSITION": 3,
+                        "TANGENT": 4,
+                        "TEXCOORD_0": 5,
+                        "WEIGHTS_0": 6
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Leg_03_LShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 8,
+                        "NORMAL": 9,
+                        "POSITION": 10,
+                        "TANGENT": 11,
+                        "TEXCOORD_0": 12,
+                        "WEIGHTS_0": 13
+                    },
+                    "indices": 7,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Leg_02_RShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 15,
+                        "NORMAL": 16,
+                        "POSITION": 17,
+                        "TANGENT": 18,
+                        "TEXCOORD_0": 19,
+                        "WEIGHTS_0": 20
+                    },
+                    "indices": 14,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Leg_02_LShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 22,
+                        "NORMAL": 23,
+                        "POSITION": 24,
+                        "TANGENT": 25,
+                        "TEXCOORD_0": 26,
+                        "WEIGHTS_0": 27
+                    },
+                    "indices": 21,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Leg_01_RShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 29,
+                        "NORMAL": 30,
+                        "POSITION": 31,
+                        "TANGENT": 32,
+                        "TEXCOORD_0": 33,
+                        "WEIGHTS_0": 34
+                    },
+                    "indices": 28,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Leg_01_LShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 36,
+                        "NORMAL": 37,
+                        "POSITION": 38,
+                        "TANGENT": 39,
+                        "TEXCOORD_0": 40,
+                        "WEIGHTS_0": 41
+                    },
+                    "indices": 35,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Knee_RShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 43,
+                        "NORMAL": 44,
+                        "POSITION": 45,
+                        "TANGENT": 46,
+                        "TEXCOORD_0": 47,
+                        "WEIGHTS_0": 48
+                    },
+                    "indices": 42,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Knee_LShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 50,
+                        "NORMAL": 51,
+                        "POSITION": 52,
+                        "TANGENT": 53,
+                        "TEXCOORD_0": 54,
+                        "WEIGHTS_0": 55
+                    },
+                    "indices": 49,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Head_Shape2",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 57,
+                        "NORMAL": 58,
+                        "POSITION": 59,
+                        "TANGENT": 60,
+                        "TEXCOORD_0": 61,
+                        "WEIGHTS_0": 62
+                    },
+                    "indices": 56,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Head_01Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 64,
+                        "NORMAL": 65,
+                        "POSITION": 66,
+                        "TANGENT": 67,
+                        "TEXCOORD_0": 68,
+                        "WEIGHTS_0": 69
+                    },
+                    "indices": 63,
+                    "mode": 4,
+                    "material": 1
+                }
+            ]
+        },
+        {
+            "name": "BodyShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 71,
+                        "NORMAL": 72,
+                        "POSITION": 73,
+                        "TANGENT": 74,
+                        "TEXCOORD_0": 75,
+                        "WEIGHTS_0": 76
+                    },
+                    "indices": 70,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "BladeShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 78,
+                        "NORMAL": 79,
+                        "POSITION": 80,
+                        "TANGENT": 81,
+                        "TEXCOORD_0": 82,
+                        "WEIGHTS_0": 83
+                    },
+                    "indices": 77,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "skins": [
+        {
+            "name": "Leg_03_RShape",
+            "inverseBindMatrices": 84,
+            "joints": [
+                29,
+                20,
+                24,
+                26,
+                28,
+                14,
+                16
+            ]
+        },
+        {
+            "name": "Leg_03_LShape",
+            "inverseBindMatrices": 85,
+            "joints": [
+                29,
+                24,
+                26,
+                10,
+                14,
+                16,
+                18
+            ]
+        },
+        {
+            "name": "Leg_02_RShape",
+            "inverseBindMatrices": 86,
+            "joints": [
+                29,
+                6,
+                20,
+                22,
+                24,
+                26,
+                28,
+                12,
+                14,
+                16
+            ]
+        },
+        {
+            "name": "Leg_02_LShape",
+            "inverseBindMatrices": 87,
+            "joints": [
+                29,
+                6,
+                22,
+                24,
+                26,
+                10,
+                12,
+                14,
+                16,
+                18
+            ]
+        },
+        {
+            "name": "Leg_01_RShape",
+            "inverseBindMatrices": 88,
+            "joints": [
+                29,
+                6,
+                20,
+                22,
+                24,
+                12,
+                14
+            ]
+        },
+        {
+            "name": "Leg_01_LShape",
+            "inverseBindMatrices": 89,
+            "joints": [
+                29,
+                6,
+                22,
+                24,
+                10,
+                12,
+                14
+            ]
+        },
+        {
+            "name": "Knee_RShape",
+            "inverseBindMatrices": 90,
+            "joints": [
+                29,
+                6,
+                20,
+                22,
+                24,
+                26,
+                10,
+                5
+            ]
+        },
+        {
+            "name": "Knee_LShape",
+            "inverseBindMatrices": 91,
+            "joints": [
+                29,
+                6,
+                20,
+                10,
+                12,
+                14,
+                16,
+                5
+            ]
+        },
+        {
+            "name": "Head_Shape2",
+            "inverseBindMatrices": 92,
+            "joints": [
+                29,
+                6,
+                8,
+                20,
+                22,
+                10,
+                12,
+                5
+            ]
+        },
+        {
+            "name": "Head_01Shape",
+            "inverseBindMatrices": 93,
+            "joints": [
+                29,
+                6,
+                8,
+                20,
+                10,
+                5
+            ]
+        },
+        {
+            "name": "BodyShape",
+            "inverseBindMatrices": 94,
+            "joints": [
+                29,
+                6,
+                20,
+                22,
+                24,
+                10,
+                12,
+                14,
+                5
+            ]
+        },
+        {
+            "name": "BladeShape",
+            "inverseBindMatrices": 95,
+            "joints": [
+                29,
+                6,
+                20,
+                22,
+                24,
+                10,
+                12,
+                14,
+                5
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        },
+        {
+            "name": "lambert2",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.4481327533721924
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            },
+            "alphaMode": "BLEND"
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "animations": [
+        {
+            "name": "EnemyAnimation",
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 0,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 1,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 2,
+                    "target": {
+                        "node": 1,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 3,
+                    "target": {
+                        "node": 10,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 4,
+                    "target": {
+                        "node": 12,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 5,
+                    "target": {
+                        "node": 14,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 6,
+                    "target": {
+                        "node": 20,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 7,
+                    "target": {
+                        "node": 22,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 8,
+                    "target": {
+                        "node": 24,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 9,
+                    "target": {
+                        "node": 3,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 97
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 98
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 99
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 100
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 101
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 102
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 103
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 104
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 105
+                },
+                {
+                    "input": 96,
+                    "interpolation": "LINEAR",
+                    "output": 106
+                }
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Leg_03_RShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 36,
+            "max": [
+                23
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.9984681010246276,
+                0.9843681454658508,
+                0.9992700815200806
+            ],
+            "min": [
+                -0.998468279838562,
+                -0.9977492690086364,
+                -0.9992700815200806
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 288,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                -2.555760383605957,
+                -0.3906269967556,
+                0.07419626414775849
+            ],
+            "min": [
+                -2.690527200698853,
+                -0.47025465965271,
+                -0.07505950331687927
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.003028386039659381,
+                0.8854376673698425,
+                0.9994614720344544,
+                1.0
+            ],
+            "min": [
+                -0.6694084405899048,
+                -0.7423845529556274,
+                -0.029834944754838945,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 192,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.1679550409317017,
+                0.08146166801452637
+            ],
+            "min": [
+                0.10298925638198853,
+                0.04585456848144531
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_03_RShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 384,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_LShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 72,
+            "componentType": 5123,
+            "count": 36,
+            "max": [
+                23
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 384,
+            "componentType": 5123,
+            "count": 24,
+            "max": [
+                5,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                5,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 576,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.9949857592582704,
+                0.9910672903060912,
+                0.99925035238266
+            ],
+            "min": [
+                -0.9949859976768494,
+                -0.9942539930343628,
+                -0.9992502927780153
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 864,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                -2.525975465774536,
+                -0.3915559649467468,
+                0.07416695356369019
+            ],
+            "min": [
+                -2.663615465164185,
+                -0.4709990322589874,
+                -0.07510576397180557
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 768,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.002994352951645851,
+                0.8637664914131165,
+                0.9994431734085084,
+                1.0
+            ],
+            "min": [
+                -0.6354297399520874,
+                -0.7716094255447388,
+                -0.0313124805688858,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 576,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                0.1679550409317017,
+                0.08146166801452637
+            ],
+            "min": [
+                0.10298925638198853,
+                0.04585456848144531
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_03_LShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 1152,
+            "componentType": 5126,
+            "count": 24,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_RShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 144,
+            "componentType": 5123,
+            "count": 108,
+            "max": [
+                47
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 768,
+            "componentType": 5123,
+            "count": 48,
+            "max": [
+                4,
+                4,
+                0,
+                0
+            ],
+            "min": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 1152,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.8564526438713074,
+                0.8186034560203552,
+                0.9992701411247252
+            ],
+            "min": [
+                -0.8435987830162048,
+                -0.8690485954284668,
+                -0.9992700815200806
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 1728,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                -2.628489255905152,
+                -0.025209374725818639,
+                0.102436363697052
+            ],
+            "min": [
+                -3.044260263442993,
+                -0.46784183382987978,
+                -0.08964098244905472
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 1536,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.8793349266052246,
+                0.8335276246070862,
+                0.03304879739880562,
+                1.0
+            ],
+            "min": [
+                -0.8614873886108398,
+                -0.8338145017623901,
+                -0.9992700219154358,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 1152,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.04102268069982529,
+                0.05651301145553589
+            ],
+            "min": [
+                0.02213454246520996,
+                0.004104197025299072
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_02_RShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 2304,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                1.0,
+                0.4653432071208954,
+                0.0,
+                0.0
+            ],
+            "min": [
+                0.5346567630767822,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_LShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 360,
+            "componentType": 5123,
+            "count": 108,
+            "max": [
+                47
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 1536,
+            "componentType": 5123,
+            "count": 48,
+            "max": [
+                7,
+                7,
+                0,
+                0
+            ],
+            "min": [
+                6,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 2304,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.852847695350647,
+                0.8605359792709351,
+                0.99925035238266
+            ],
+            "min": [
+                -0.8699866533279419,
+                -0.850473940372467,
+                -0.99925035238266
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 2880,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                -2.598819494247437,
+                -0.01782580465078354,
+                0.10285061597824097
+            ],
+            "min": [
+                -3.030285358428955,
+                -0.4355465769767761,
+                -0.08870482444763184
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 3072,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.8363456130027771,
+                0.8737905621528626,
+                0.03491669148206711,
+                1.0
+            ],
+            "min": [
+                -0.8364022374153137,
+                -0.874531626701355,
+                -0.999549925327301,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 1920,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                0.04102268069982529,
+                0.05651301145553589
+            ],
+            "min": [
+                0.02213454246520996,
+                0.004104197025299072
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_02_LShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 3840,
+            "componentType": 5126,
+            "count": 48,
+            "max": [
+                1.0,
+                0.45641183853149416,
+                0.0,
+                0.0
+            ],
+            "min": [
+                0.5435881614685059,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_RShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 576,
+            "componentType": 5123,
+            "count": 60,
+            "max": [
+                39
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 2304,
+            "componentType": 5123,
+            "count": 40,
+            "max": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 3456,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.9703122973442078,
+                0.9736605286598206,
+                0.9992701411247252
+            ],
+            "min": [
+                -0.9703122973442078,
+                -0.9852532744407654,
+                -0.9992700815200806
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 3936,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                -2.733783483505249,
+                0.01093601994216442,
+                0.059789758175611499
+            ],
+            "min": [
+                -3.095400094985962,
+                -0.1920165717601776,
+                -0.03555127233266831
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 4608,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.21435898542404176,
+                0.9760342240333556,
+                0.03773045912384987,
+                1.0
+            ],
+            "min": [
+                -0.2469726949930191,
+                -0.968334436416626,
+                -0.9997305870056152,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 2624,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.053294837474823,
+                0.13184404373168946
+            ],
+            "min": [
+                0.019605740904808049,
+                0.0819171667098999
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_01_RShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 5248,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_LShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 696,
+            "componentType": 5123,
+            "count": 60,
+            "max": [
+                39
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 2944,
+            "componentType": 5123,
+            "count": 40,
+            "max": [
+                5,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                5,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 4416,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.9922387599945068,
+                0.9790590405464172,
+                0.99925035238266
+            ],
+            "min": [
+                -0.9922391176223756,
+                -0.998097836971283,
+                -0.99925035238266
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 4896,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                -2.7238638401031496,
+                0.009677260182797909,
+                0.05987529456615448
+            ],
+            "min": [
+                -3.08155632019043,
+                -0.1648547351360321,
+                -0.03452011197805405
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 5888,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.09626510739326476,
+                0.9946068525314332,
+                0.038689278066158298,
+                1.0
+            ],
+            "min": [
+                -0.1295705884695053,
+                -0.9908382296562196,
+                -0.9997276067733764,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 3264,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                0.053294837474823,
+                0.13184404373168946
+            ],
+            "min": [
+                0.019605740904808049,
+                0.0819171667098999
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Leg_01_LShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 6528,
+            "componentType": 5126,
+            "count": 40,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_RShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 816,
+            "componentType": 5123,
+            "count": 240,
+            "max": [
+                132
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 3584,
+            "componentType": 5123,
+            "count": 133,
+            "max": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 5376,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.7476534843444824,
+                0.8307193517684937,
+                0.9998912215232848
+            ],
+            "min": [
+                -0.920527160167694,
+                -0.9437112212181092,
+                -0.9976605772972108
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 6972,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                -2.503674030303955,
+                0.15886303782463077,
+                0.16272017359733582
+            ],
+            "min": [
+                -2.8405795097351076,
+                -0.17182590067386628,
+                -0.14002862572669984
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 7168,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.7744535803794861,
+                0.7907509207725525,
+                0.9549636840820313,
+                1.0
+            ],
+            "min": [
+                -0.7776522040367127,
+                -0.7890351414680481,
+                -0.9998644590377808,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 4648,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.21088695526123048,
+                0.3692364692687989
+            ],
+            "min": [
+                0.08535955846309662,
+                0.28301143646240237
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Knee_RShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 9296,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_LShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 1296,
+            "componentType": 5123,
+            "count": 240,
+            "max": [
+                132
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 5712,
+            "componentType": 5123,
+            "count": 133,
+            "max": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 8568,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.6931818723678589,
+                0.8696845173835754,
+                0.9998415112495422
+            ],
+            "min": [
+                -0.951457381248474,
+                -0.9638329148292542,
+                -0.9976707696914672
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 10164,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                -2.495793581008911,
+                0.18596526980400089,
+                0.1645910143852234
+            ],
+            "min": [
+                -2.829996347427368,
+                -0.14356271922588349,
+                -0.1388254463672638
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 11424,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.7523149847984314,
+                0.8386474847793579,
+                0.9557176232337952,
+                1.0
+            ],
+            "min": [
+                -0.7562139630317688,
+                -0.8402033448219299,
+                -0.9999154806137084,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 6776,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                0.21088695526123048,
+                0.3692364692687989
+            ],
+            "min": [
+                0.08535955846309662,
+                0.28301143646240237
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Knee_LShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 13552,
+            "componentType": 5126,
+            "count": 133,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_Shape2#0/indices",
+            "bufferView": 0,
+            "byteOffset": 1776,
+            "componentType": 5123,
+            "count": 432,
+            "max": [
+                198
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 7840,
+            "componentType": 5123,
+            "count": 199,
+            "max": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 11760,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.996220886707306,
+                0.9962207674980164
+            ],
+            "min": [
+                -1.0,
+                -0.9962207674980164,
+                -0.9962207674980164
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 14148,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.1370420455932618,
+                -1.0380481481552125,
+                1.3567107915878297
+            ],
+            "min": [
+                -1.1527762413024905,
+                -1.8408634662628177,
+                -0.9708073735237122
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 15680,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.6763978004455566,
+                0.9962226152420044,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.5595434904098511,
+                -0.9970018267631532,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 9432,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                0.21791180968284608,
+                0.3725829124450684
+            ],
+            "min": [
+                0.01607903838157654,
+                0.017748773097991945
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Head_Shape2#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 18864,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_01Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 2640,
+            "componentType": 5123,
+            "count": 180,
+            "max": [
+                66
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 11024,
+            "componentType": 5123,
+            "count": 67,
+            "max": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 16536,
+            "componentType": 5126,
+            "count": 67,
+            "max": [
+                0.987677276134491,
+                0.9962207674980164,
+                0.9975380897521972
+            ],
+            "min": [
+                -0.987677276134491,
+                0.0701259896159172,
+                -0.970351219177246
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 17340,
+            "componentType": 5126,
+            "count": 67,
+            "max": [
+                1.073261022567749,
+                0.8411411046981812,
+                1.2968041896820069
+            ],
+            "min": [
+                -1.0889952182769776,
+                -1.2258549928665162,
+                -0.857280433177948
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 22048,
+            "componentType": 5126,
+            "count": 67,
+            "max": [
+                0.9999022483825684,
+                0.7171787023544312,
+                0.9989402890205384,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.5858439803123474,
+                -0.9975686073303224,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 11560,
+            "componentType": 5126,
+            "count": 67,
+            "max": [
+                0.40081244707107546,
+                0.3744286298751831
+            ],
+            "min": [
+                0.1253063976764679,
+                0.016882777214050294
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Head_01Shape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 23120,
+            "componentType": 5126,
+            "count": 67,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BodyShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 3000,
+            "componentType": 5123,
+            "count": 432,
+            "max": [
+                198
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "BodyShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 12096,
+            "componentType": 5123,
+            "count": 199,
+            "max": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BodyShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 18144,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.996220886707306,
+                0.9962207674980164
+            ],
+            "min": [
+                -1.0,
+                -0.9962207674980164,
+                -0.9962207674980164
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "BodyShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 20532,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.1370420455932618,
+                -1.034156084060669,
+                1.2672592401504517
+            ],
+            "min": [
+                -1.1527762413024905,
+                -1.5568320751190186,
+                -1.035834550857544
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "BodyShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 24192,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.6766183376312256,
+                0.9953856468200684,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.5493468642234802,
+                -0.9970077276229858,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BodyShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 13688,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                0.17930442094802857,
+                0.2902637720108032
+            ],
+            "min": [
+                0.0944538712501526,
+                0.029139459133148198
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "BodyShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 27376,
+            "componentType": 5126,
+            "count": 199,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BladeShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 3864,
+            "componentType": 5123,
+            "count": 288,
+            "max": [
+                158
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "BladeShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 15280,
+            "componentType": 5123,
+            "count": 159,
+            "max": [
+                8,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                8,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BladeShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 22920,
+            "componentType": 5126,
+            "count": 159,
+            "max": [
+                0.9950438737869264,
+                0.9992784261703492,
+                0.9962207078933716
+            ],
+            "min": [
+                -0.9950438737869264,
+                -0.9992784261703492,
+                -0.9962207078933716
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "BladeShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 24828,
+            "componentType": 5126,
+            "count": 159,
+            "max": [
+                1.3114804029464722,
+                2.978226661682129,
+                1.4376482963562012
+            ],
+            "min": [
+                -1.3242937326431277,
+                -6.431504249572754,
+                -1.2003655433654786
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "BladeShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 30560,
+            "componentType": 5126,
+            "count": 159,
+            "max": [
+                0.05601267889142037,
+                0.9999947547912598,
+                0.14407432079315186,
+                1.0
+            ],
+            "min": [
+                -0.0559580959379673,
+                -0.9998897910118104,
+                -0.17800430953502656,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "BladeShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 16552,
+            "componentType": 5126,
+            "count": 159,
+            "max": [
+                0.4326387047767639,
+                0.25883859395980837
+            ],
+            "min": [
+                0.01573044061660767,
+                0.00859612226486206
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "BladeShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 33104,
+            "componentType": 5126,
+            "count": 159,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_03_RShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                0.9995523691177368,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.003378418041393161,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.5913312435150148,
+                0.3938049077987671,
+                2.192737340927124,
+                1.0
+            ],
+            "min": [
+                -0.6719841361045837,
+                -1.0,
+                -0.7405621409416199,
+                0.0,
+                -0.7399678230285645,
+                -0.03864607214927673,
+                -0.9988303184509276,
+                0.0,
+                -0.02974866144359112,
+                -0.9992700219154358,
+                -0.038695693016052249,
+                0.0,
+                -1.7406545877456666,
+                -2.660158157348633,
+                -1.986761450767517,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Leg_03_LShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 448,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                0.9999622702598572,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0019874440040439369,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.591843366622925,
+                0.4381774663925171,
+                2.1809017658233644,
+                1.0
+            ],
+            "min": [
+                -0.6038860082626343,
+                -1.0,
+                -0.7970673441886902,
+                0.0,
+                -0.7964200377464294,
+                -0.03864607214927673,
+                -0.9992172122001648,
+                0.0,
+                -0.03219931945204735,
+                -0.9992700219154358,
+                -0.038695693016052249,
+                0.0,
+                -1.5293391942977906,
+                -2.660158157348633,
+                -2.154728412628174,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Leg_02_RShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 896,
+            "componentType": 5126,
+            "count": 10,
+            "max": [
+                0.9995523691177368,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0868568867444992,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.5913312435150148,
+                0.3938049077987671,
+                2.192737340927124,
+                1.0
+            ],
+            "min": [
+                -0.999720335006714,
+                -1.0,
+                -0.7405621409416199,
+                0.0,
+                -0.7399678230285645,
+                -0.03864607214927673,
+                -0.9989740252494812,
+                0.0,
+                -0.02974866144359112,
+                -0.9992700219154358,
+                -0.038695693016052249,
+                0.0,
+                -2.7639126777648927,
+                -2.6620640754699709,
+                -1.986761450767517,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Leg_02_LShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 1536,
+            "componentType": 5126,
+            "count": 10,
+            "max": [
+                0.9999622702598572,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0868568867444992,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.591843366622925,
+                0.4381774663925171,
+                2.1809017658233644,
+                1.0
+            ],
+            "min": [
+                -0.999720335006714,
+                -1.0,
+                -0.7970673441886902,
+                0.0,
+                -0.7964200377464294,
+                -0.03864607214927673,
+                -0.9992172122001648,
+                0.0,
+                -0.03219931945204735,
+                -0.9992700219154358,
+                -0.038695693016052249,
+                0.0,
+                -2.763329267501831,
+                -2.6620640754699709,
+                -2.154728412628174,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Leg_01_RShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 2176,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                0.7345626354217529,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0868568867444992,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.131929636001587,
+                0.02201475389301777,
+                2.192737340927124,
+                1.0
+            ],
+            "min": [
+                -0.999720335006714,
+                -1.0,
+                -0.7405621409416199,
+                0.0,
+                -0.7399678230285645,
+                -0.0381360836327076,
+                -0.9989740252494812,
+                0.0,
+                -0.02974866144359112,
+                -0.9992700219154358,
+                -0.03868986666202545,
+                0.0,
+                -2.7639126777648927,
+                -2.6620640754699709,
+                -1.986761450767517,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Leg_01_LShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 2624,
+            "componentType": 5126,
+            "count": 7,
+            "max": [
+                0.7345626354217529,
+                0.002312809927389026,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0868568867444992,
+                0.9992502927780153,
+                1.0,
+                0.0,
+                2.142143487930298,
+                0.4381774663925171,
+                2.1809017658233644,
+                1.0
+            ],
+            "min": [
+                -0.999720335006714,
+                -1.0,
+                -0.7970673441886902,
+                0.0,
+                -0.7964200377464294,
+                -0.03864607214927673,
+                -0.9989740252494812,
+                0.0,
+                -0.03219931945204735,
+                -0.9992700219154358,
+                -0.03868986666202545,
+                0.0,
+                -2.763329267501831,
+                -2.6620640754699709,
+                -2.154728412628174,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Knee_RShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 3072,
+            "componentType": 5126,
+            "count": 8,
+            "max": [
+                0.9907178282737732,
+                0.002243313938379288,
+                0.710787832736969,
+                0.0,
+                1.0,
+                0.0381360836327076,
+                0.7028321623802185,
+                0.0,
+                0.0868568867444992,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.5875091552734377,
+                0.3938049077987671,
+                2.192737340927124,
+                1.0
+            ],
+            "min": [
+                -0.994889795780182,
+                -1.0,
+                -0.7970673441886902,
+                0.0,
+                -0.7964200377464294,
+                -0.03864607214927673,
+                -0.9941599369049072,
+                0.0,
+                -0.03219931945204735,
+                -0.9992700219154358,
+                -0.038167670369148257,
+                0.0,
+                -2.755112409591675,
+                -2.662174224853516,
+                -2.1457762718200685,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Knee_LShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 3584,
+            "componentType": 5126,
+            "count": 8,
+            "max": [
+                0.9958150386810304,
+                0.002312809927389026,
+                0.6785369515419006,
+                0.0,
+                1.0,
+                0.03864607214927673,
+                0.7339552044868469,
+                0.0,
+                0.0868568867444992,
+                0.9992700219154358,
+                1.0,
+                0.0,
+                2.591843366622925,
+                0.022349588572978978,
+                2.084368705749512,
+                1.0
+            ],
+            "min": [
+                -0.999720335006714,
+                -1.0,
+                -0.7970673441886902,
+                0.0,
+                -0.7964200377464294,
+                -0.03864607214927673,
+                -0.9989740252494812,
+                0.0,
+                -0.03219931945204735,
+                -0.9992502927780153,
+                -0.038695693016052249,
+                0.0,
+                -2.763329267501831,
+                -2.662174224853516,
+                -2.154728412628174,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Head_Shape2/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 4096,
+            "componentType": 5126,
+            "count": 8,
+            "max": [
+                0.24226966500282288,
+                0.0005603239987976849,
+                0.0,
+                0.0,
+                0.24226966500282288,
+                0.2413540780544281,
+                0.16269870102405549,
+                0.0,
+                0.02104278840124607,
+                0.2420928180217743,
+                0.24226966500282288,
+                0.0,
+                1.2029047012329102,
+                0.2519168257713318,
+                0.4717123806476593,
+                1.0
+            ],
+            "min": [
+                -0.24220189452171329,
+                -0.24226966500282288,
+                -0.19310522079467777,
+                0.0,
+                -0.19294841587543488,
+                -0.009362771175801754,
+                -0.2420210987329483,
+                0.0,
+                -0.007800918072462082,
+                -0.2420928180217743,
+                -0.0093733798712492,
+                0.0,
+                -0.5148096680641174,
+                -0.2519168257713318,
+                -0.8414249420166016,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "Head_01Shape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 4608,
+            "componentType": 5126,
+            "count": 6,
+            "max": [
+                0.24226966500282288,
+                0.0,
+                0.0,
+                0.0,
+                0.24226966500282288,
+                0.2413540780544281,
+                0.16269870102405549,
+                0.0,
+                0.02104278840124607,
+                0.2420928180217743,
+                0.24226966500282288,
+                0.0,
+                1.2029047012329102,
+                0.16371707618236545,
+                0.4717123806476593,
+                1.0
+            ],
+            "min": [
+                -0.1628013700246811,
+                -0.24226966500282288,
+                -0.19310522079467777,
+                0.0,
+                -0.19294841587543488,
+                -0.009362771175801754,
+                -0.02104278840124607,
+                0.0,
+                -0.007800918072462082,
+                0.0,
+                0.005207793787121773,
+                0.0,
+                -0.5148096680641174,
+                -0.2519168257713318,
+                -0.07685983926057816,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "BodyShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 4992,
+            "componentType": 5126,
+            "count": 9,
+            "max": [
+                0.17796224355697633,
+                0.0005603239987976849,
+                0.17220231890678409,
+                0.0,
+                0.24226966500282288,
+                0.009362771175801754,
+                0.17781507968902589,
+                0.0,
+                0.02104278840124607,
+                0.2420928180217743,
+                0.24226966500282288,
+                0.0,
+                0.9533978700637816,
+                0.2424016147851944,
+                0.6417638063430786,
+                1.0
+            ],
+            "min": [
+                -0.24220189452171329,
+                -0.24226966500282288,
+                -0.19310522079467777,
+                0.0,
+                -0.19294841587543488,
+                -0.009362771175801754,
+                -0.2420210987329483,
+                0.0,
+                -0.007800918072462082,
+                -0.2420928180217743,
+                -0.0093733798712492,
+                0.0,
+                -0.3160974085330963,
+                -0.2424016147851944,
+                -0.5933752655982971,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "BladeShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 5568,
+            "componentType": 5126,
+            "count": 9,
+            "max": [
+                0.21853020787239076,
+                0.0006880540167912841,
+                0.2114572674036026,
+                0.0,
+                0.018062300980091096,
+                0.0006980369798839092,
+                0.0132569195702672,
+                0.0,
+                0.0258396677672863,
+                0.29727989435195925,
+                0.297497034072876,
+                0.0,
+                0.7540171146392822,
+                0.23479801416397096,
+                0.49694979190826418,
+                1.0
+            ],
+            "min": [
+                -0.2974138259887696,
+                -0.297497034072876,
+                -0.23712517321109773,
+                0.0,
+                -0.014385178685188294,
+                -0.0006980369798839092,
+                -0.018043769523501397,
+                0.0,
+                -0.009579203091561796,
+                -0.29727989435195925,
+                -0.011510119773447514,
+                0.0,
+                -0.1584310382604599,
+                -0.23479801416397096,
+                -0.3951589167118073,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "EnemyAnimation/anim/frames",
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                6.791666507720947
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Rootctr/anim/EnemyAnimation/T",
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.0,
+                0.1050727590918541,
+                0.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "hip/anim/EnemyAnimation/T",
+            "bufferView": 6,
+            "byteOffset": 1968,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.4240281283855438,
+                0.991956353187561,
+                0.06696116924285889
+            ],
+            "min": [
+                -0.4269390106201172,
+                0.18857070803642274,
+                -0.07892893254756928
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "hip/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.1383696049451828,
+                0.428570032119751,
+                0.7049514651298523,
+                1.0
+            ],
+            "min": [
+                -0.1727103441953659,
+                -0.0014555200468748808,
+                -0.22289727628231049,
+                0.5674083232879639
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_L1/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 2624,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.5558401346206665,
+                0.9913061857223512,
+                0.8303996920585632,
+                0.6777035593986511
+            ],
+            "min": [
+                -0.030709702521562578,
+                0.28240302205085757,
+                -0.230825811624527,
+                -0.26848575472831728
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_L2/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 5248,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                1.0,
+                -0.0,
+                0.4688687026500702,
+                0.0
+            ],
+            "min": [
+                0.883267879486084,
+                -0.0,
+                -0.000026386000172351488,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_L3/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 7872,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                -0.0,
+                0.9868993163108826,
+                -0.0,
+                -0.16133740544319154
+            ],
+            "min": [
+                -0.0,
+                0.016676150262355806,
+                -0.0,
+                -0.999860942363739
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_R1/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 10496,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.5479292273521423,
+                0.7866238951683044,
+                0.8084250688552856,
+                0.5718975067138672
+            ],
+            "min": [
+                -0.122578464448452,
+                0.2836303412914276,
+                0.4145478308200836,
+                -0.3649502694606781
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_R2/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 13120,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                1.0,
+                -0.0,
+                0.469331443309784,
+                0.0
+            ],
+            "min": [
+                0.8830220699310303,
+                -0.0,
+                -0.00002617999962239992,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Leg_R3/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 15744,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                -0.0,
+                0.9952244162559508,
+                -0.0,
+                -0.0976131111383438
+            ],
+            "min": [
+                -0.0,
+                -0.0000490079983137548,
+                -0.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "blade/anim/EnemyAnimation/R",
+            "bufferView": 7,
+            "byteOffset": 18368,
+            "componentType": 5126,
+            "count": 164,
+            "max": [
+                0.0,
+                0.9999128580093384,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                -0.9999128580093384,
+                0.0,
+                -0.9996515512466432
+            ],
+            "type": "VEC4"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_Enemy/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 111936,
+            "byteLength": 4440,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_Enemy/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 93456,
+            "byteLength": 17824,
+            "byteStride": 8,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Enemy/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 66720,
+            "byteLength": 26736,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Enemy/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 27136,
+            "byteLength": 35648,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Enemy/data/generic-64",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 6144
+        },
+        {
+            "name": "Mesh_Enemy/data/generic-4",
+            "buffer": 0,
+            "byteOffset": 111280,
+            "byteLength": 656
+        },
+        {
+            "name": "Mesh_Enemy/data/generic-12",
+            "buffer": 0,
+            "byteOffset": 62784,
+            "byteLength": 3936
+        },
+        {
+            "name": "Mesh_Enemy/data/generic-16",
+            "buffer": 0,
+            "byteOffset": 6144,
+            "byteLength": 20992
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_Enemy/data",
+            "byteLength": 116376,
+            "uri": "Mesh_Enemy0.bin"
+        }
+    ]
+}

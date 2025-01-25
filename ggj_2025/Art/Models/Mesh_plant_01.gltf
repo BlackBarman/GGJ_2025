@@ -1,0 +1,207 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Plant_01",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Plant_01Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Plant_01Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 45,
+            "max": [
+                20
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Plant_01Shape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 21,
+            "max": [
+                0.8900071978569031,
+                0.9888816475868224,
+                0.7680680155754089
+            ],
+            "min": [
+                -0.45510196685791018,
+                0.45050305128097536,
+                -0.8280960917472839
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Plant_01Shape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 252,
+            "componentType": 5126,
+            "count": 21,
+            "max": [
+                0.1274380683898926,
+                0.12116673588752748,
+                0.2125692367553711
+            ],
+            "min": [
+                -0.24193429946899418,
+                0.0,
+                -0.17365360260009769
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Plant_01Shape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 21,
+            "max": [
+                0.8686463832855225,
+                0.10741422325372696,
+                0.5024374127388,
+                1.0
+            ],
+            "min": [
+                -0.990516185760498,
+                -0.009828726761043072,
+                -0.9962130784988404,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Plant_01Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 21,
+            "max": [
+                0.30830246210098269,
+                0.18183612823486329
+            ],
+            "min": [
+                0.2523103356361389,
+                0.0800015926361084
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_Plant_01/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 1008,
+            "byteLength": 90,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_Plant_01/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 336,
+            "byteLength": 504,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Plant_01/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 336,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Plant_01/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 840,
+            "byteLength": 168,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_Plant_01/data",
+            "byteLength": 1098,
+            "uri": "Mesh_Plant_010.bin"
+        }
+    ]
+}

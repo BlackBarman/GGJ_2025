@@ -1,0 +1,11 @@
+{
+	"Mesh_Enemy": {
+		"version": 1,
+		"id": "Mesh_Enemy",
+		"name": "1",
+		"kind": "Puppeteer",
+		"mood": null,
+		"postPlaybackMood": null,
+		"duration": 9.958333333
+	}
+}
