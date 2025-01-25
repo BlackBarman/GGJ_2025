@@ -23,9 +23,7 @@ wait_time = 0.88
 autostart = true
 
 [node name="SpawnLocation" type="Path3D" parent="."]
-
 transform = Transform3D(19.9999, -0.00119993, 0.0423369, 0.0238708, 0.999995, 0.0603307, -0.0424091, -0.003014, 19.9999, -1.54482, -0.0221634, -3.75659)
-
 curve = SubResource("Curve3D_oh1qr")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]

@@ -22,11 +22,11 @@ func _update_score() -> void:
 
 func _update_progress_bars() -> void:
 	if is_instance_valid(bubble_base_1):
-		$VBoxContainer/VBoxContainer/BubbleBase1Size.value = main_level.bubble_bases[0].scale.x*100
+		$VBoxContainer/VBoxContainer/BubbleBase1Size.value = bubble_base_1.scale.x*100
 	if is_instance_valid(bubble_base_2):
-		$VBoxContainer/VBoxContainer2/BubbleBase2Size.value = main_level.bubble_bases[1].scale.x*100
+		$VBoxContainer/VBoxContainer2/BubbleBase2Size.value = bubble_base_2.scale.x*100
 	if is_instance_valid(bubble_base_3):
-		$VBoxContainer/VBoxContainer3/BubbleBase3Size.value = main_level.bubble_bases[2].scale.x*100
+		$VBoxContainer/VBoxContainer3/BubbleBase3Size.value = bubble_base_3.scale.x*100
 
 
 func _reveal_game_over_screen() -> void:
