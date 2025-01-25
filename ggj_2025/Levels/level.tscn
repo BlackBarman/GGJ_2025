@@ -38,7 +38,7 @@ bubble_base_2 = NodePath("../BubbleBase2")
 bubble_base_3 = NodePath("../BubbleBase3")
 
 [node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("6_81aot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 camera = NodePath("Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]

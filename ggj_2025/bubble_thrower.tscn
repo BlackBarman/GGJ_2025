@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6xnb60rqwatj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1yie3"]
+radius = 0.1
+height = 1.0
+
+[node name="BubbleThrower" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 3.72529e-09, 1, -1.62981e-09, 0, -8.3819e-09, 1, -0.0759619, 0.802236, 0.0254478)
+mesh = SubResource("CapsuleMesh_1yie3")
