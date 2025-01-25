@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg8dbagredl1y"]
+[gd_scene load_steps=10 format=3 uid="uid://cg8dbagredl1y"]
 
 [ext_resource type="Script" path="res://LevelIngredients/user_interface.gd" id="1_b1q2o"]
 [ext_resource type="Script" path="res://Levels/pause_screen.gd" id="2_3f7nt"]
+[ext_resource type="Script" path="res://bubble_bullets_counter.gd" id="3_37nnr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmecw"]
 bg_color = Color(0.408913, 0.742192, 0.398924, 1)
@@ -9,6 +10,15 @@ bg_color = Color(0.408913, 0.742192, 0.398924, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8tmj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7j6wh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pipvd"]
+bg_color = Color(0.688595, 0.688595, 0.688595, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5boye"]
+bg_color = Color(0.43677, 0.758577, 0.24322, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m1d8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="UserInterface" type="Control"]
 layout_mode = 3
@@ -242,6 +252,51 @@ text = "- shoot them with your gun to make them explode
 - the longer the bubble grows, the bigger the explosion
 - the explosion also hurts the player and the bubble
 they have to protect"
+
+[node name="PlayerInfo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -57.0
+offset_right = 287.0
+grow_vertical = 0
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="BubbleBulletsCounter" type="Label" parent="PlayerInfo/VBoxContainer"]
+layout_mode = 2
+text = " Bubble Bullets: 0/3"
+script = ExtResource("3_37nnr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerInfo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Label" type="Label" parent="PlayerInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = " HP"
+
+[node name="HPBar" type="ProgressBar" parent="PlayerInfo/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_pipvd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5boye")
+show_percentage = false
+
+[node name="VSeparator" type="VSeparator" parent="PlayerInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_8m1d8")
 
 [connection signal="pressed" from="GameOverScreen/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/ResumeButton" to="PauseScreen" method="_on_resume_button_pressed"]

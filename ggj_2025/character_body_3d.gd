@@ -24,8 +24,6 @@ func _process(_delta: float) -> void:
 		%body.look_at(line_trace_result.position) # can also put an offset on the y axis
 		%body.rotation.z = 0
 		%body.rotation.x = 0
-	
-	pass
 
 
 func _physics_process(delta: float) -> void:
@@ -36,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector( "ui_down", "ui_up","ui_left", "ui_right",)
@@ -68,4 +66,3 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	if lives <= 0 :
 		SignalBus.PlayerDied.emit()
 		queue_free()
-	pass # Replace with function body.
