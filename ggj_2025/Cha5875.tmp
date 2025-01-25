@@ -14,7 +14,6 @@ size = Vector3(1.035, 0.265, 0.36)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c6sac"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_beiag")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -39,7 +38,6 @@ mesh = SubResource("BoxMesh_ee17j")
 skeleton = NodePath("../../..")
 
 [node name="bullet_spawn_point" type="Node3D" parent="body/Weapon/MeshInstance3D"]
-unique_name_in_owner = true
 transform = Transform3D(1, -1.51787e-05, 0.000453502, 1.51657e-05, 1, 8.32009e-06, -0.000453413, -8.29482e-06, 1, -0.648258, -0.047873, 0.0457189)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="body/Weapon/MeshInstance3D/bullet_spawn_point"]

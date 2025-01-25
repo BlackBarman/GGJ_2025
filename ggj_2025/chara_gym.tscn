@@ -28,4 +28,5 @@ shape = SubResource("BoxShape3D_qp8qp")
 transform = Transform3D(-0.000407769, 0.827701, -0.561169, 0.0133831, 0.561123, 0.827624, 0.99991, -0.00717271, -0.011306, -3.55096, 10.8529, 0.335707)
 
 [node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_vhqtd")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 camera = NodePath("../Camera3D")
