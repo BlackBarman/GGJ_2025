@@ -1,11 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6xnb60rqwatj"]
+[gd_scene load_steps=4 format=3 uid="uid://c6xnb60rqwatj"]
+
+[ext_resource type="Script" path="res://bubble_thrower.gd" id="1_isi8d"]
+[ext_resource type="PackedScene" uid="uid://dcwb7h31dbvf5" path="res://bubble_bullet.tscn" id="2_i4erf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1yie3"]
 radius = 0.1
 height = 1.0
 
-[node name="BubbleThrower" type="Node3D"]
+[node name="BubbleThrower" type="Node3D" node_paths=PackedStringArray("bubble_spawn_point", "bubble_spawn_point_2")]
+script = ExtResource("1_isi8d")
+bubble_bullet = ExtResource("2_i4erf")
+bubble_spawn_point = NodePath("MeshInstance3D/BubbleSpawnPoint")
+bubble_spawn_point_2 = NodePath("MeshInstance3D/BubbleSpawnPoint2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 3.72529e-09, 1, -1.62981e-09, 0, -8.3819e-09, 1, -0.0759619, 0.802236, 0.0254478)
+transform = Transform3D(1, 0, 0, 3.72529e-09, 1, -1.62981e-09, 0, -8.3819e-09, 1, -0.0759619, 0.502236, 0.0254478)
 mesh = SubResource("CapsuleMesh_1yie3")
+
+[node name="BubbleSpawnPoint" type="Node3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 3.72529e-09)
+
+[node name="BubbleSpawnPoint2" type="Node3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, -3.72529e-09)
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.8
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
