@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg8dbagredl1y"]
+[gd_scene load_steps=6 format=3 uid="uid://cg8dbagredl1y"]
 
 [ext_resource type="Script" path="res://LevelIngredients/user_interface.gd" id="1_b1q2o"]
 [ext_resource type="Script" path="res://Levels/pause_screen.gd" id="2_3f7nt"]
@@ -7,6 +7,8 @@
 bg_color = Color(0.408913, 0.742192, 0.398924, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8tmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7j6wh"]
 
 [node name="UserInterface" type="Control"]
 layout_mode = 3
@@ -188,12 +190,60 @@ text = "RESUME"
 
 [node name="ShowControlsButton" type="Button" parent="PauseScreen/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7j6wh")
 text = "SHOW CONTROLS"
 
 [node name="RestartButton" type="Button" parent="PauseScreen/VBoxContainer"]
 layout_mode = 2
 text = "RESTART"
 
+[node name="ControlsExplBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -148.0
+offset_bottom = 152.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlsExplBackground"]
+layout_mode = 0
+offset_right = 302.0
+offset_bottom = 154.0
+
+[node name="Label" type="Label" parent="ControlsExplBackground/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "CONTROLS:"
+
+[node name="Label2" type="Label" parent="ControlsExplBackground/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "- WASD to move
+- mouse to aim
+- left click to shoot the base gun
+- right mouse button to shoot a bubble bullet
+"
+
+[node name="Label3" type="Label" parent="ControlsExplBackground/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "BUBBLE BULLETS:"
+
+[node name="Label4" type="Label" parent="ControlsExplBackground/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "- shoot them with your gun to make them explode
+- the longer the bubble grows, the bigger the explosion
+- the explosion also hurts the player and the bubble
+they have to protect"
+
 [connection signal="pressed" from="GameOverScreen/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/ResumeButton" to="PauseScreen" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseScreen/VBoxContainer/ShowControlsButton" to="PauseScreen" method="_on_show_controls_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/RestartButton" to="PauseScreen" method="_on_restart_button_pressed"]
