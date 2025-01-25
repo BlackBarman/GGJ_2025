@@ -1,7 +1,13 @@
 extends CharacterBody3D
 
+var max_lives = 10
+var lives = max_lives:
+	get:
+		return lives
+	set(value):
+		lives = value
+		SignalBus.PlayerHealthChanged.emit(value, max_lives)
 
-var lives = 10
 const SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg8dbagredl1y"]
+[gd_scene load_steps=11 format=3 uid="uid://cg8dbagredl1y"]
 
 [ext_resource type="Script" path="res://LevelIngredients/user_interface.gd" id="1_b1q2o"]
 [ext_resource type="Script" path="res://Levels/pause_screen.gd" id="2_3f7nt"]
 [ext_resource type="Script" path="res://bubble_bullets_counter.gd" id="3_37nnr"]
+[ext_resource type="Script" path="res://hp_bar.gd" id="4_arv6w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmecw"]
 bg_color = Color(0.408913, 0.742192, 0.398924, 1)
@@ -292,7 +293,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/background = SubResource("StyleBoxFlat_pipvd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_5boye")
+step = 1.0
+value = 100.0
 show_percentage = false
+script = ExtResource("4_arv6w")
 
 [node name="VSeparator" type="VSeparator" parent="PlayerInfo/VBoxContainer/HBoxContainer"]
 layout_mode = 2
