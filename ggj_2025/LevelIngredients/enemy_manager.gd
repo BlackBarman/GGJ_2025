@@ -23,5 +23,5 @@ func _on_timer_timeout() -> void:
 	var offset = randf_range(0.0, path_length)
 	var enemy_spawn_location = $SpawnLocation.curve.sample_baked(offset)
 
-	enemy.global_transform.origin = enemy_spawn_location
+	enemy.position = enemy_spawn_location
 	add_child(enemy)

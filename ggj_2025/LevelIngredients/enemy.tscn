@@ -19,6 +19,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_j3jo5")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+use_3d_avoidance = true
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 material = SubResource("StandardMaterial3D_2cb3j")

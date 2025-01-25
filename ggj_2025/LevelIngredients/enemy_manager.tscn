@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c55d1hd8xdqse"]
+[gd_scene load_steps=5 format=3 uid="uid://c55d1hd8xdqse"]
 
 [ext_resource type="Script" path="res://LevelIngredients/enemy_manager.gd" id="1_lhhgp"]
 [ext_resource type="PackedScene" uid="uid://cc1glweosc7j1" path="res://LevelIngredients/enemy.tscn" id="2_wn8kv"]
@@ -6,10 +6,13 @@
 [sub_resource type="Curve3D" id="Curve3D_oh1qr"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -5, 0, -5, 0, 0, 0, 0, 0, 0, 5, 0, -5, 0, 0, 0, 0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, -5, 0, 5, 0, 0, 0, 0, 0, 0, -5, 0, -5),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15, 0, -15, 0, 0, 0, 0, 0, 0, 15, 0, -15, 0, 0, 0, 0, 0, 0, 15, 0, 15, 0, 0, 0, 0, 0, 0, -15, 0, 15, 0, 0, 0, 0, 0, 0, -15, 0, -15),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84bhv"]
+albedo_color = Color(0.946082, 0.566281, 0, 1)
 
 [node name="EnemyManager" type="Node3D"]
 script = ExtResource("1_lhhgp")
@@ -20,7 +23,23 @@ wait_time = 0.88
 autostart = true
 
 [node name="SpawnLocation" type="Path3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
 curve = SubResource("Curve3D_oh1qr")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.023, 0, -99.6294)
+material = SubResource("StandardMaterial3D_84bhv")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.277, 0, -99.686)
+height = 0.002
+material = SubResource("StandardMaterial3D_84bhv")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.793, 0, 100.742)
+material = SubResource("StandardMaterial3D_84bhv")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.4521, 0, 99.1017)
+material = SubResource("StandardMaterial3D_84bhv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
