@@ -5,7 +5,7 @@ extends ColorRect
 func _ready() -> void:
 	visible = false
 	$"../ControlsExplBackground".visible = false
-
+	$"../Credits".visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,3 +34,10 @@ func _on_show_controls_button_pressed() -> void:
 		$"../ControlsExplBackground".visible = true
 	else:
 		$"../ControlsExplBackground".visible = false
+
+
+func _on_show_credits_button_pressed() -> void:
+	if $"../Credits".visible == false:
+		$"../Credits".visible = true
+	else: 
+		$"../Credits".visible = false

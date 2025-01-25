@@ -157,8 +157,14 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i8tmj")
 text = "TRY AGAIN"
 
+[node name="ShowCreditsButton" type="Button" parent="GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7j6wh")
+text = "SHOW CREDITS"
+
 [node name="PauseScreen" type="ColorRect" parent="."]
 process_mode = 3
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -199,14 +205,19 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i8tmj")
 text = "RESUME"
 
+[node name="RestartButton" type="Button" parent="PauseScreen/VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
+
 [node name="ShowControlsButton" type="Button" parent="PauseScreen/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7j6wh")
 text = "SHOW CONTROLS"
 
-[node name="RestartButton" type="Button" parent="PauseScreen/VBoxContainer"]
+[node name="ShowCreditsButton" type="Button" parent="PauseScreen/VBoxContainer"]
 layout_mode = 2
-text = "RESTART"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7j6wh")
+text = "SHOW CREDITS"
 
 [node name="ControlsExplBackground" type="ColorRect" parent="."]
 layout_mode = 1
@@ -302,7 +313,48 @@ script = ExtResource("4_arv6w")
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_8m1d8")
 
+[node name="Credits" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
+offset_right = 302.0
+offset_bottom = 154.0
+
+[node name="Label" type="Label" parent="Credits/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "TEAM MEMBERS"
+
+[node name="Label3" type="Label" parent="Credits/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "(in alphabetical order)
+"
+
+[node name="Label2" type="Label" parent="Credits/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Riccardo Lusuardi - Game Designer
+Rick Rijkers - Programmer
+Ruben Seij - 3D artist
+Sebastiano Zezza - Game Designer
+"
+
 [connection signal="pressed" from="GameOverScreen/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/VBoxContainer/ShowCreditsButton" to="PauseScreen" method="_on_show_credits_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/ResumeButton" to="PauseScreen" method="_on_resume_button_pressed"]
-[connection signal="pressed" from="PauseScreen/VBoxContainer/ShowControlsButton" to="PauseScreen" method="_on_show_controls_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/RestartButton" to="PauseScreen" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseScreen/VBoxContainer/ShowControlsButton" to="PauseScreen" method="_on_show_controls_button_pressed"]
+[connection signal="pressed" from="PauseScreen/VBoxContainer/ShowCreditsButton" to="PauseScreen" method="_on_show_credits_button_pressed"]
