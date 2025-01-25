@@ -1,6 +1,6 @@
 extends CharacterBody3D
-var damage_to_bubble = 10
-var nav_speed = 1
+@export var damage_to_bubble = 10
+@export var nav_speed = 2
 var target_bubble = null
 @onready var nav_agent = $NavigationAgent3D
 
