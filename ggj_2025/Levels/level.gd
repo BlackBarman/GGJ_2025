@@ -12,6 +12,7 @@ var score : float = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.BubbleBasePopped.connect(_bubble_base_popped)
+	SignalBus.PlayerDied.connect(_player_died)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,3 +32,7 @@ func _bubble_base_popped(bubble_base: BubbleBase):
 	if bubble_bases.size() <= 0:
 		game_over = true
 		$UserInterface._reveal_game_over_screen()
+
+func _player_died():
+	game_over = true
+	$UserInterface._reveal_game_over_screen()

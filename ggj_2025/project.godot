@@ -33,6 +33,8 @@ enabled=PackedStringArray()
 EnemyGroup=""
 PlayerBullet="Bullets shot by the player"
 EnemyCollisionGroup="Area 3d of the enemies"
+BubbleBullet=""
+ExplosionGroup=""
 
 [input]
 

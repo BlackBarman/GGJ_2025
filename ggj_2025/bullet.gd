@@ -21,8 +21,11 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		queue_free()
 	elif body.get_parent().is_in_group("BubbleBaseGroup"):
-		pass
 		body.get_parent()._decrease_size(friendly_damage)
+		queue_free()
+	elif body.get_parent().is_in_group("BubbleBullet"):
+		body.get_parent()._explode()
+		queue_free()
 
 func _on_timer_timeout() -> void:
 	queue_free()

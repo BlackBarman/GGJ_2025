@@ -1,16 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcwb7h31dbvf5"]
+[gd_scene load_steps=9 format=3 uid="uid://dcwb7h31dbvf5"]
 
 [ext_resource type="Script" path="res://bubble_bullet.gd" id="1_0s537"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhupf"]
+albedo_color = Color(0.861095, 0.610328, 0.159058, 1)
+
 [sub_resource type="SphereMesh" id="SphereMesh_lpc63"]
+material = SubResource("StandardMaterial3D_bhupf")
 radius = 0.1
 height = 0.2
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tkke4"]
 height = 0.2
+radius = 0.09
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yxenn"]
+height = 0.2
 radius = 0.1
 
-[node name="BubbleBullet" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_50hqx"]
+height = 0.2
+radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpnk7"]
+albedo_color = Color(0.733943, 0.205287, 0.0591741, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_e2tra"]
+material = SubResource("StandardMaterial3D_fpnk7")
+radius = 0.1
+height = 0.2
+
+[node name="BubbleBullet" type="Node3D" groups=["BubbleBullet"]]
 script = ExtResource("1_0s537")
 max_size = 10.0
 size_change_speed = 3.0
@@ -22,3 +42,19 @@ mesh = SubResource("SphereMesh_lpc63")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("CylinderShape3D_tkke4")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_yxenn")
+
+[node name="ExplosionArea" type="Area3D" parent="." groups=["ExplosionGroup"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionArea"]
+shape = SubResource("CylinderShape3D_50hqx")
+
+[node name="ExplosionMesh3D" type="MeshInstance3D" parent="ExplosionArea"]
+visible = false
+mesh = SubResource("SphereMesh_e2tra")
+
+[connection signal="area_entered" from="ExplosionArea" to="." method="_on_explosion_area_area_entered"]
