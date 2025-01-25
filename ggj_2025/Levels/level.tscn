@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=14 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
 [ext_resource type="Texture2D" uid="uid://dgwuvt75nv5h" path="res://Art/sandTexture.png" id="6_ihoce"]
-[ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
+[ext_resource type="Script" path="res://Levels/camera_3d.gd" id="6_rjptt"]
+[ext_resource type="PackedScene" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 
@@ -49,10 +50,13 @@ bubble_base_3 = NodePath("../BubbleBase3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 collision_layer = 13
 collision_mask = 13
-camera = NodePath("Camera3D")
+camera = NodePath("../Camera3D")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -0.32163, 13, 0)
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("character", "main_level")]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -0.32163, 13.5, 0)
+script = ExtResource("6_rjptt")
+character = NodePath("../CharacterBody3D")
+main_level = NodePath("..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
