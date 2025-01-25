@@ -36,7 +36,10 @@ func _physics_process(delta: float) -> void:
 	
 	var bubble_size = target_bubble.get_global_transform().basis.x
 	var current_location = global_transform.origin
-	var next_location = nav_agent.target_position + Vector3(randf_range(-bubble_size.x, bubble_size.x),0,randf_range(-bubble_size.x, bubble_size.x))
+	var next_location = nav_agent.target_position 
+	look_at(next_location)
+	rotation.x =0
+	rotation.z =0
 	var distance_to_bubble = nav_agent.distance_to_target()
 	
 	if distance_to_bubble - 0.7 < bubble_size.x:
