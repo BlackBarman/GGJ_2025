@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
-[ext_resource type="PackedScene" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
+[ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 

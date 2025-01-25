@@ -21,7 +21,7 @@ shape = SubResource("CapsuleShape3D_a8dag")
 
 [node name="body" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(0.999383, 0.0172979, 0.030571, -0.0183187, 0.999273, 0.0334326, -0.0299705, -0.033972, 0.998973, 0, 0, 0)
+transform = Transform3D(0.99939, 0.0154835, 0.0313129, -0.0164856, 0.999352, 0.0320016, -0.0307971, -0.0324983, 0.998997, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_qxsh1")
 
 [node name="Weapon" type="Node3D" parent="body" node_paths=PackedStringArray("bullet_parent", "bullet_spawn_pos")]
@@ -39,6 +39,10 @@ skeleton = NodePath("../../..")
 [node name="bullet_spawn_point" type="Node3D" parent="body/Weapon/MeshInstance3D"]
 unique_name_in_owner = true
 transform = Transform3D(1, -1.51787e-05, 0.000453502, 1.51657e-05, 1, 8.32009e-06, -0.000453413, -8.29482e-06, 1, -0.648258, -0.047873, 0.0457189)
+
+[node name="bullet_spawn_point2" type="Node3D" parent="body/Weapon/MeshInstance3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, -1.51827e-05, 0.000453504, 1.51667e-05, 1, 8.31857e-06, -0.000453416, -8.29622e-06, 1, 1.35471, -0.115988, 0.10581)
 
 [node name="BubbleThrower" parent="body" instance=ExtResource("4_2jctd")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.399753, 0.00691921, 0.0122284)

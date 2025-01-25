@@ -11,7 +11,7 @@ func _ready() -> void:
 	%Timer.start()
 
 func _process(delta: float) -> void:
-	position += bullet_dir * bullet_speed * delta
+	global_position += bullet_dir * bullet_speed * delta
 
 func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 	queue_free()
