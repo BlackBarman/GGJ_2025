@@ -9,6 +9,7 @@
 
 [node name="ChaseEnemy" type="CharacterBody3D" groups=["EnemyGroup", "enemies"]]
 script = ExtResource("1_goor2")
+follow_player = true
 
 [node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
 

@@ -1,17 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=13 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
-[ext_resource type="Texture2D" uid="uid://dcua7l7x4j8vs" path="res://Art/GreyBackground.png" id="1_o7hox"]
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
-[ext_resource type="PackedScene" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
+[ext_resource type="Texture2D" uid="uid://dgwuvt75nv5h" path="res://Art/sandTexture.png" id="6_ihoce"]
+[ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5l56y"]
-size = Vector3(63.0818, 1, 64.9574)
+size = Vector3(385.814, 1, 386.665)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghf1n"]
+albedo_texture = ExtResource("6_ihoce")
+uv1_scale = Vector3(1000, 1000, 1000)
+texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1xfiw"]
 size = Vector3(1, 13.9551, 61.3906)
@@ -26,13 +31,13 @@ visible = false
 texture = ExtResource("1_50b8p")
 
 [node name="BubbleBase" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -0.5, -4.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -4)
 
 [node name="BubbleBase2" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.5, 6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 2)
 
 [node name="BubbleBase3" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, -0.5, -6.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16595, -0.623795, -4.19299)
 
 [node name="UserInterface" parent="." node_paths=PackedStringArray("main_level", "bubble_base_1", "bubble_base_2", "bubble_base_3") instance=ExtResource("5_fkdie")]
 main_level = NodePath("..")
@@ -42,8 +47,8 @@ bubble_base_3 = NodePath("../BubbleBase3")
 
 [node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("6_81aot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-collision_layer = 5
-collision_mask = 5
+collision_layer = 13
+collision_mask = 13
 camera = NodePath("Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
@@ -52,12 +57,15 @@ transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.3
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516968, -1, 0.0343628)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19974, -1, -0.489334)
 shape = SubResource("BoxShape3D_5l56y")
 
 [node name="Floor" type="Sprite3D" parent="StaticBody3D"]
 transform = Transform3D(300, 0, 0, 0, -1.31134e-05, 1, 0, -300, -4.37114e-08, 0, -0.5, 0)
-texture = ExtResource("1_o7hox")
+material_override = SubResource("StandardMaterial3D_ghf1n")
+transparent = false
+double_sided = false
+texture = ExtResource("6_ihoce")
 
 [node name="EnemyManager" parent="." instance=ExtResource("7_0sfro")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36096, 0, 0)
@@ -70,12 +78,12 @@ script = ExtResource("9_f8ko0")
 transform = Transform3D(0.972684, -0.232059, -0.00582203, -0.0680426, -0.309002, 0.948624, -0.221936, -0.922316, -0.316351, 1.19252, 4.48798, -5.65305)
 
 [node name="Walls" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100346, 0.338142, -0.0844994)
-collision_layer = 4
-collision_mask = 4
+transform = Transform3D(1, -1.02445e-08, 7.10133e-09, 0, 1, 0, 1.10595e-08, 0, 1, -0.100346, 0.338141, -0.0844989)
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7599, -0.529223, -0.627045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.7096, -0.494803, -0.652952)
 shape = SubResource("BoxShape3D_1xfiw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/CollisionShape3D"]
@@ -83,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9087, -0.694733, -2.17728)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.959, -0.660313, -2.20319)
 shape = SubResource("BoxShape3D_1xfiw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/CollisionShape3D2"]
@@ -91,7 +99,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.876158, -0.694733, -20.6503)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.825848, -0.660313, -20.6762)
 shape = SubResource("BoxShape3D_1xfiw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/CollisionShape3D3"]
@@ -99,7 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.876158, -0.694733, 23.4252)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.825848, -0.660313, 23.3993)
 shape = SubResource("BoxShape3D_1xfiw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls/CollisionShape3D4"]

@@ -3,8 +3,8 @@ extends Node3D
 @export var enemy_scene: PackedScene
 @export var chase_enemy_scene: PackedScene
 
-@export var enemy_spawn_time = 0.5
-@export var enemies_to_spawn = 3;
+@export var enemy_spawn_time = 1
+@export var enemies_to_spawn = 1;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +14,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var enemies = get_tree().get_nodes_in_group("EnemyGroup")
+	print(enemies.size())
 	pass
 
 

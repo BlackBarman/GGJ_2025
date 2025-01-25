@@ -1,6 +1,7 @@
 extends CharacterBody3D
 @export var damage_to_bubble = 10
 @export var nav_speed = 2
+@export var follow_player =false
 var target_bubble = null
 @onready var nav_agent = $NavigationAgent3D
 var following_player=false
@@ -36,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		_get_new_bubble()
 		return
 		
-	if !following_player:
+	if !following_player || !follow_player:
 		var bubble_size = target_bubble.get_global_transform().basis.x
 		var current_location = global_transform.origin
 		var next_location = nav_agent.target_position 
@@ -66,7 +67,8 @@ func update_target_location(target_location):
 
 
 func _on_detection_collider_body_entered(body: Node3D) -> void:
-	if  body.name == "CharacterBody3D": 
-		following_player =true
-		target_bubble =body
-		update_target_location(body.global_position)
+	if follow_player:
+		if  body.name == "CharacterBody3D": 
+			following_player =true
+			target_bubble =body
+			update_target_location(body.global_position)

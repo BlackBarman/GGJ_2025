@@ -24,7 +24,10 @@ func _get_new_bubble():
 	else:
 		target_bubble =null
 
-func _physics_process(delta: float) -> void:	
+func _physics_process(delta: float) -> void:
+	if global_position.y< -10:
+		print("please help me!!")
+	
 	if nav_agent.is_target_reachable():
 		return
 	else:
@@ -36,7 +39,9 @@ func _physics_process(delta: float) -> void:
 	
 	var bubble_size = target_bubble.get_global_transform().basis.x
 	var current_location = global_transform.origin
-	var next_location = nav_agent.target_position 
+	var next_location = nav_agent.get_next_path_position()
+	if global_transform.origin == next_location:
+		return
 	look_at(next_location)
 	rotation.x =0
 	rotation.z =0

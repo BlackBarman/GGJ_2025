@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cc1glweosc7j1"]
 
-[ext_resource type="Script" path="res://LevelIngredients/enemy.gd" id="1_oapgt"]
+[ext_resource type="Script" path="res://LevelIngredients/chase_enemy.gd" id="1_qdhtq"]
 [ext_resource type="PackedScene" uid="uid://dvbcpyo2wiwqo" path="res://Art/Blockout/Mesh_TestEnemy.gltf" id="2_ep0hf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q38e3"]
@@ -8,7 +8,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_j3jo5"]
 
 [node name="Enemy" type="CharacterBody3D" groups=["EnemyGroup", "enemies"]]
-script = ExtResource("1_oapgt")
+script = ExtResource("1_qdhtq")
 
 [node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
 
