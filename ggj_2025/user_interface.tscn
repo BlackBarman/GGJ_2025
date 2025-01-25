@@ -186,5 +186,14 @@ layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_i8tmj")
 text = "RESUME"
 
+[node name="ShowControlsButton" type="Button" parent="PauseScreen/VBoxContainer"]
+layout_mode = 2
+text = "SHOW CONTROLS"
+
+[node name="RestartButton" type="Button" parent="PauseScreen/VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
+
 [connection signal="pressed" from="GameOverScreen/VBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="PauseScreen/VBoxContainer/ResumeButton" to="PauseScreen" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseScreen/VBoxContainer/RestartButton" to="PauseScreen" method="_on_restart_button_pressed"]

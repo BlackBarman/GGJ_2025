@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SignalBus="*res://Globals/signal_bus.gd"
 AudioManager="*res://Globals/AudioManager.gd"
+LevelChanger="*res://Globals/level_changer.gd"
 
 [display]
 

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
-[ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
+[ext_resource type="PackedScene" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 
@@ -26,13 +26,13 @@ visible = false
 texture = ExtResource("1_50b8p")
 
 [node name="BubbleBase" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -0.5, -4.2)
 
 [node name="BubbleBase2" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.5, 6)
 
 [node name="BubbleBase3" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.5, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, -0.5, -6.3)
 
 [node name="UserInterface" parent="." node_paths=PackedStringArray("main_level", "bubble_base_1", "bubble_base_2", "bubble_base_3") instance=ExtResource("5_fkdie")]
 main_level = NodePath("..")

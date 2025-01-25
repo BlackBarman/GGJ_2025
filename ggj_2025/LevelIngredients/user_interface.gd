@@ -36,4 +36,4 @@ func _reveal_game_over_screen() -> void:
 
 
 func _on_try_again_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	LevelChanger._reload_level()

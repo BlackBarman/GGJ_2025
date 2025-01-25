@@ -37,3 +37,8 @@ func _change_scene(old_scene : Node, new_scene : String):
 		
 	else:
 		print("the path: ", new_scene, " isn't valid.")
+
+func _reload_level():
+	get_tree().paused = false
+	get_tree().call_group("BubbleBullet", "queue_free")
+	get_tree().reload_current_scene()
