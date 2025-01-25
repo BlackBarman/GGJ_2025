@@ -1,9 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc1glweosc7j1"]
+[gd_scene load_steps=4 format=3 uid="uid://cc1glweosc7j1"]
 
 [ext_resource type="Script" path="res://LevelIngredients/enemy.gd" id="1_oapgt"]
-[ext_resource type="PackedScene" uid="uid://mp1apjqd1ee" path="res://Health_component.tscn" id="2_7adgm"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_t70pa"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j3jo5"]
 
@@ -12,12 +9,6 @@ albedo_color = Color(1, 0, 1, 1)
 
 [node name="Enemy" type="CharacterBody3D" groups=["EnemyGroup", "enemies"]]
 script = ExtResource("1_oapgt")
-
-[node name="Hurtbox" parent="." instance=ExtResource("2_7adgm")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox"]
-transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
-shape = SubResource("SphereShape3D_t70pa")
 
 [node name="DetectionCollider" type="Area3D" parent="."]
 visible = false
