@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 			visible = true
 		else:
 			visible = false
+			get_tree().paused = false
 
 
 func _on_resume_button_pressed() -> void:
