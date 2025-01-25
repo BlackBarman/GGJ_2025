@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://djh16x4a0bmhf"]
+
+[ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="1_vhqtd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i611c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1y1ec"]
+albedo_color = Color(1, 1, 0.521569, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qp8qp"]
+size = Vector3(26.2927, 1, 25.5705)
+
+[node name="CharaGym" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_i611c")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_1y1ec")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2.34873, 0, 0, 0, 2.34873, 0, 0, 0, 2.34873, -7.67281, 0.0154781, 6.5099)
+shape = SubResource("BoxShape3D_qp8qp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.000407769, 0.827701, -0.561169, 0.0133831, 0.561123, 0.827624, 0.99991, -0.00717271, -0.011306, -3.55096, 10.8529, 0.335707)
+
+[node name="CharacterBody3D" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_vhqtd")]
+camera = NodePath("../Camera3D")
