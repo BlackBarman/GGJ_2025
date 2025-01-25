@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=11 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
 [ext_resource type="PackedScene" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
+[ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
+[ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5l56y"]
 size = Vector3(50, 1, 28)
@@ -53,3 +55,7 @@ transform = Transform3D(155, 0, 0, 0, -3.71547e-06, 1, 0, -85, -4.37114e-08, 0, 
 texture = ExtResource("1_o7hox")
 
 [node name="EnemyManager" parent="." instance=ExtResource("7_0sfro")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3opmy")
+script = ExtResource("9_f8ko0")

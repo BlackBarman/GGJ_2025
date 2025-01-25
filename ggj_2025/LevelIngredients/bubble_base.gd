@@ -34,10 +34,5 @@ func _decrease_size(damage : float) -> void:
 
 
 func _die() -> void:
-	#$AudioStreamPlayer.play()
 	SignalBus.BubbleBasePopped.emit(self)
 	queue_free()
-
-
-func _on_audio_stream_player_finished() -> void:
-	print("audio played")
