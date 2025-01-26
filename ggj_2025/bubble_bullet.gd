@@ -59,6 +59,13 @@ func _physics_process(delta: float) -> void:
 			$ExplosionArea.scale.y += (explosion_growth_speed * delta)
 			$ExplosionArea.scale.z += (explosion_growth_speed * delta)
 		else:
+			var overlapping_areas = $ExplosionArea.get_overlapping_areas()
+			for i in overlapping_areas:
+				if i.is_in_group("EnemyCollisionGroup"):
+					SignalBus.EnemyDiedInExplosion.emit(i.get_owner().enemy_base_score, i.global_position)
+					i.get_owner()._die()
+				if i.is_in_group("BubbleBaseGroup"):
+					i.get_owner()._decrease_size(explosion_base_bubble_damage)
 			queue_free()
 
 
@@ -76,8 +83,7 @@ func _on_explosion_area_area_entered(area: Area3D) -> void:
 			print(area.get_owner().position)
 			SignalBus.EnemyDiedInExplosion.emit(area.get_owner().enemy_base_score, area.global_position)
 			area.get_owner()._die()
-		if area.is_in_group("BubbleBaseGroup"):
-			area.get_owner()._decrease_size(explosion_base_bubble_damage)
+		
 
 
 func _on_timer_timeout() -> void:
