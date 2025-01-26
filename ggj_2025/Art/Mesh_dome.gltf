@@ -1,0 +1,229 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Bubble_Dome",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Mesh_bubblesphere",
+            "children": [
+                2
+            ],
+            "translation": [
+                -0.07232724130153656,
+                -0.008204611949622631,
+                0.03033384308218956
+            ]
+        },
+        {
+            "name": "Mesh_bubblesphere:PIV",
+            "mesh": 0,
+            "translation": [
+                0.07232724130153656,
+                0.008204611949622631,
+                -0.03033384308218956
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Mesh_bubblesphereShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Mesh_bubblesphereShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1140,
+            "max": [
+                239
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Mesh_bubblesphereShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                0.9969174265861512,
+                1.0,
+                0.9969174265861512
+            ],
+            "min": [
+                -0.9969173073768616,
+                0.07845891267061234,
+                -0.9969174265861512
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Mesh_bubblesphereShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 2880,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                0.9276727437973024,
+                0.9917953610420228,
+                1.030333995819092
+            ],
+            "min": [
+                -1.0723274946212769,
+                -0.008204611949622631,
+                -0.9696666598320008
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Mesh_bubblesphereShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                1.0,
+                0.0786905437707901,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.07869061827659607,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Mesh_bubblesphereShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                0.1868043541908264,
+                0.4705674052238465
+            ],
+            "min": [
+                0.09487059712409972,
+                0.4082258343696594
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_dome/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 11520,
+            "byteLength": 2280,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_dome/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 3840,
+            "byteLength": 5760,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_dome/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 3840,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_dome/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 9600,
+            "byteLength": 1920,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_dome/data",
+            "byteLength": 13800,
+            "uri": "Mesh_dome0.bin"
+        }
+    ]
+}

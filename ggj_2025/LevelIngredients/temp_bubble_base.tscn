@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyoao1c6ahkl5"]
+
+[ext_resource type="PackedScene" uid="uid://b8l5uu32d4toi" path="res://Art/TempBubbleBase.glb" id="1_fcyqd"]
+[ext_resource type="PackedScene" uid="uid://cmkyhsbb5qm0h" path="res://Art/Mesh_dome.gltf" id="2_xayl1"]
+
+[node name="TempBubbleBase" instance=ExtResource("1_fcyqd")]
+
+[node name="TempBase" parent="." index="0"]
+visible = false
+
+[node name="Mesh_dome" parent="." index="1" instance=ExtResource("2_xayl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0701512, 0, -0.0333833)
