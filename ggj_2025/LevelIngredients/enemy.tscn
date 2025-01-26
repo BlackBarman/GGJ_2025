@@ -13,6 +13,7 @@ height = 2.24095
 script = ExtResource("1_qdhtq")
 
 [node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
+unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0758578, 0.689389, 0.0145397)
@@ -35,3 +36,5 @@ shape = SubResource("SphereShape3D_j3jo5")
 
 [node name="Mesh_TestEnemy" parent="." instance=ExtResource("2_ep0hf")]
 transform = Transform3D(5.69185e-05, -0.00039038, 1, 0.00267499, 0.999996, 0.000390248, -0.999996, 0.00267495, 5.80035e-05, 0, 0, 0)
+
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

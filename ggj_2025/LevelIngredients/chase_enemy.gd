@@ -27,6 +27,8 @@ func _get_new_bubble():
 	else:
 		target_bubble =null
 
+
+
 func _physics_process(delta: float) -> void:	
 	if nav_agent.is_target_reachable():
 		return
@@ -78,3 +80,9 @@ func _on_detection_collider_body_entered(body: Node3D) -> void:
 func _die():
 	AudioManager.SmallBoom.play()
 	queue_free()
+
+
+func _on_area_3d_area_exited(area: Area3D) -> void:
+	if area.is_in_group("PlayerBullet"):
+		queue_free()
+	pass # Replace with function body.
