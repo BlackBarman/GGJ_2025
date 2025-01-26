@@ -25,9 +25,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if main_level.game_over == false:
 		var new_position2 = global_position.lerp(character.global_position, speed*_delta)
-		global_position.x = new_position2.x-0.7
+		global_position.x = new_position2.x
 		global_position.z = new_position2.z
-		$"../../castCamera".global_position.x = new_position2.x-0.7
+		$"../../castCamera".global_position.x = new_position2.x
 		$"../../castCamera".global_position.z = new_position2.z
 	# rotation changes the snap space
 	if global_rotation != _prev_rotation:
