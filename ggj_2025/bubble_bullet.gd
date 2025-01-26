@@ -22,6 +22,27 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+	#move
+	#global_position += bullet_dir * bullet_speed * delta
+	
+	#expands
+	#if scale.x < max_size && exploding == false:
+		#scale.x += (size_change_speed * delta)
+		#scale.y += (size_change_speed * delta)
+		#scale.z += (size_change_speed * delta)
+	
+	#explode
+	#if exploding == true:
+		#if $ExplosionArea.scale.x < explosion_max_size:
+			#$ExplosionArea.scale.x += (explosion_growth_speed * delta)
+			#$ExplosionArea.scale.y += (explosion_growth_speed * delta)
+			#$ExplosionArea.scale.z += (explosion_growth_speed * delta)
+		#else:
+			#queue_free()
+
+
+func _physics_process(delta: float) -> void:
 	#move
 	global_position += bullet_dir * bullet_speed * delta
 	

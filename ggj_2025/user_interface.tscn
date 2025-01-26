@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg8dbagredl1y"]
+[gd_scene load_steps=13 format=3 uid="uid://cg8dbagredl1y"]
 
 [ext_resource type="Script" path="res://LevelIngredients/user_interface.gd" id="1_b1q2o"]
 [ext_resource type="Script" path="res://Levels/pause_screen.gd" id="2_3f7nt"]
@@ -19,6 +19,12 @@ bg_color = Color(0.688595, 0.688595, 0.688595, 1)
 bg_color = Color(0.43677, 0.758577, 0.24322, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m1d8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1mp30"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6i4kg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="UserInterface" type="Control"]
@@ -331,30 +337,38 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -20.0
-offset_bottom = 20.0
+offset_left = -420.0
+offset_top = -260.0
+offset_bottom = 256.0
 grow_horizontal = 0
 grow_vertical = 2
 color = Color(0.141176, 0.141176, 0.141176, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits"]
 layout_mode = 0
-offset_right = 302.0
-offset_bottom = 154.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Credits/VBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="Credits/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_1mp30")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "TEAM MEMBERS"
 
-[node name="Label3" type="Label" parent="Credits/VBoxContainer"]
+[node name="Label3" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "(in alphabetical order)
 "
 
-[node name="Label2" type="Label" parent="Credits/VBoxContainer"]
+[node name="Label2" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "Riccardo Lusuardi - Game Designer
@@ -362,6 +376,35 @@ Rick Rijkers - Programmer
 Ruben Seij - 3D artist
 Sebastiano Zezza - Game Designer
 "
+
+[node name="HSeparator" type="HSeparator" parent="Credits/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SOUND CREDITS"
+
+[node name="Label5" type="Label" parent="Credits/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Bubble Pop by TheBuilder15 -- https://freesound.org/s/411462/ -- License: Creative Commons 0
+Laser Shoot7 by MusicLegends -- https://freesound.org/s/344312/ -- License: Attribution 3.0
+Small boom by AceOfSpadesProduc100 -- https://freesound.org/s/341626/ -- License: Attribution 4.0
+Metal barrel hit.wav by SuperSouper -- https://freesound.org/s/681764/ -- License: Creative Commons 0
+Hurt_C_05 by cabled_mess -- https://freesound.org/s/350919/ -- License: Creative Commons 0
+bubble (4).wav by Glaneur de sons -- https://freesound.org/s/104943/ -- License: Attribution 4.0
+Heavy/Big Sci-Fi Cinematic Explosion (w/ Tail) by EvanBoyerman -- https://freesound.org/s/530885/ -- License: Attribution 3.0
+Bubbles, Medium, A.wav by InspectorJ -- https://freesound.org/s/271332/ -- License: Attribution 4.0
+8-Bit Coin Or Power Up FX For Retro Video Games by Cloud-10 -- https://freesound.org/s/647977/ -- License: Creative Commons 0
+
+"
+autowrap_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="Credits/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_6i4kg")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

@@ -16,16 +16,20 @@ func _process(delta: float) -> void:
 		else:
 			visible = false
 			get_tree().paused = false
+			$"../ControlsExplBackground".visible = false
+			$"../Credits".visible = false
 
 
 func _on_resume_button_pressed() -> void:
 	$"../ControlsExplBackground".visible = false
+	$"../Credits".visible = false
 	get_tree().paused = false
 	visible = false
 
 
 func _on_restart_button_pressed() -> void:
 	$"../ControlsExplBackground".visible = false
+	$"../Credits".visible = false
 	LevelChanger._reload_level()
 
 
