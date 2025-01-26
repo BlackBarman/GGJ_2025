@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc1glweosc7j1"]
+[gd_scene load_steps=6 format=3 uid="uid://cc1glweosc7j1"]
 
 [ext_resource type="Script" path="res://LevelIngredients/chase_enemy.gd" id="1_qdhtq"]
-[ext_resource type="PackedScene" uid="uid://dvbcpyo2wiwqo" path="res://Art/Blockout/Mesh_TestEnemy.gltf" id="2_ep0hf"]
+[ext_resource type="PackedScene" uid="uid://lg4uwisgtca7" path="res://LevelIngredients/mesh_enemy_Mesh.tscn" id="2_hd34b"]
+[ext_resource type="Script" path="res://LevelIngredients/mesh_enemy_mesh.gd" id="3_dnpua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q38e3"]
 radius = 0.902715
@@ -34,7 +35,21 @@ use_3d_avoidance = true
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_j3jo5")
 
-[node name="Mesh_TestEnemy" parent="." instance=ExtResource("2_ep0hf")]
-transform = Transform3D(5.69185e-05, -0.00039038, 1, 0.00267499, 0.999996, 0.000390248, -0.999996, 0.00267495, 5.80035e-05, 0, 0, 0)
+[node name="Mesh_Enemy" parent="." instance=ExtResource("2_hd34b")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -0.0126564, 0)
+script = ExtResource("3_dnpua")
 
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
+
+[node name="Skeleton3D" parent="Mesh_Enemy/Rootctr" index="0"]
+bones/0/position = Vector3(0, 0.647116, 0)
+bones/0/rotation = Quaternion(0.0557429, 0, 0, 0.998445)
+bones/2/rotation = Quaternion(0, -0.40995, 0, 0.912108)
+bones/9/rotation = Quaternion(0.14511, 0.705201, 0.692927, 0.0385657)
+bones/11/rotation = Quaternion(0.891952, 0, 0.452131, 0)
+bones/13/rotation = Quaternion(0, 0.939505, 0, -0.342535)
+bones/19/rotation = Quaternion(0.449978, 0.609903, 0.546772, 0.355779)
+bones/21/rotation = Quaternion(0.892152, 0, 0.451735, 0)
+bones/23/rotation = Quaternion(0, 0.939939, 0, -0.341343)
+
+[editable path="Mesh_Enemy"]

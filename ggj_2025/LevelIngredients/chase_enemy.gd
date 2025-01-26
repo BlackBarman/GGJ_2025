@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		rotation.z =0
 		var distance_to_bubble = nav_agent.distance_to_target()
 		
-		if distance_to_bubble - 0.7 < bubble_size.x:
+		if distance_to_bubble - 0.9 < bubble_size.x:
 			velocity = Vector3(0,0,0)  
 			target_bubble._decrease_size(delta/damage_to_bubble)
 		else:
