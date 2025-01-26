@@ -1,10 +1,17 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://er6vpopafufa"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://de2yyvyhmm2vk"]
+
+[ext_resource type="Texture2D" uid="uid://b4vk4xpgir0aq" path="res://Art/Textures/BubbleBullet_Texture.png" id="1_61j2a"]
 
 [resource]
+transparency = 1
+blend_mode = 1
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.94902, 0.733333, 0.517647, 1)
+albedo_texture = ExtResource("1_61j2a")
 metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.954027, 0.0691739, 0, 1)
 rim_enabled = true
 rim = 0.1
 rim_tint = 1.0

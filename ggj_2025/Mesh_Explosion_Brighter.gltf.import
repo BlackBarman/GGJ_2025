@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c41bflmp5b6ul"
-path="res://.godot/imported/Mesh_Explosion.gltf-214b0c01f59b0df667b8b0f350c8b71e.scn"
+uid="uid://5htxhrx6vgvi"
+path="res://.godot/imported/Mesh_Explosion_Brighter.gltf-ae831e429fd9b8c940a58c421167ac3a.scn"
 
 [deps]
 
-source_file="res://Mesh_Explosion.gltf"
-dest_files=["res://.godot/imported/Mesh_Explosion.gltf-214b0c01f59b0df667b8b0f350c8b71e.scn"]
+source_file="res://Mesh_Explosion_Brighter.gltf"
+dest_files=["res://.godot/imported/Mesh_Explosion_Brighter.gltf-ae831e429fd9b8c940a58c421167ac3a.scn"]
 
 [params]
 
@@ -35,7 +35,7 @@ _subresources={
 "materials": {
 "M_Trimsheet_Basecolors": {
 "use_external/enabled": true,
-"use_external/path": "res://Art/Materials/Bubble.tres"
+"use_external/path": "res://Art/Materials/Bubble_Brighter.tres"
 }
 }
 }

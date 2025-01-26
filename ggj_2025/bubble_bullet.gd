@@ -72,7 +72,8 @@ func _physics_process(delta: float) -> void:
 func _explode():
 	if exploding == false:
 		exploding = true
-		$ExplosionArea/ExplosionMesh3D.visible = true
+		$ExplosionArea/Mesh_Explosion_Brighter.visible = true
+		$Mesh_Explosion.visible = false
 		AudioManager.BigExplosion.play()
 		SignalBus.emit_signal("BubbleBulletPopped")
 

@@ -57,7 +57,7 @@ visible = false
 wait_time = 0.2
 
 [node name="BubbleThrower" parent="body" instance=ExtResource("4_2jctd")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.399753, 0.00691921, 0.0122284)
+transform = Transform3D(0.999999, 0, -2.79397e-09, 1.02445e-08, -4.58676e-08, 0.999999, 0, -1, -2.18861e-08, -0.00511387, 0.717583, -0.403855)
 visible = false
 
 [node name="Tank2" parent="body" instance=ExtResource("5_xokrd")]
