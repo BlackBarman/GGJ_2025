@@ -28,6 +28,12 @@ func _get_new_bubble():
 		target_bubble =null
 
 
+func _process(delta: float) -> void:
+	if $Area3D.has_overlapping_areas():
+		for i in $Area3D.get_overlapping_areas() :
+			if i.is_in_group("PlayerBullet"):
+				queue_free()
+			pass
 
 func _physics_process(delta: float) -> void:	
 	if nav_agent.is_target_reachable():

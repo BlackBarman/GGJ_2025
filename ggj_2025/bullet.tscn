@@ -15,11 +15,14 @@ emission_energy_multiplier = 16.0
 
 [node name="Bullet" type="Node3D" groups=["PlayerBullet"]]
 script = ExtResource("1_3t4ks")
-bullet_speed = 100.0
+bullet_speed = 25.0
 friendly_damage = 0.1
+metadata/_edit_pinned_properties_ = [&"bullet_speed", &"friendly_damage"]
 
 [node name="Area3D" type="Area3D" parent="." groups=["PlayerBullet"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(0.991439, 0, 0, 0, 0.991439, 0, 0, 0, 0.991439, 0.00836301, -2.38419e-07, -0.00397062)

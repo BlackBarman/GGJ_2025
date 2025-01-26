@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://lg4uwisgtca7" path="res://LevelIngredients/mesh_enemy_Mesh.tscn" id="3_wg4sq"]
 [ext_resource type="Script" path="res://LevelIngredients/mesh_enemy_mesh.gd" id="4_gxrsl"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q38e3"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gdfdj"]
+size = Vector3(2.81616, 4.54675, 5.49831)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j3jo5"]
 
@@ -16,10 +17,11 @@ script = ExtResource("1_goor2")
 follow_player = true
 
 [node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.198495, 1.22104, 0.235819)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622102, 0)
-shape = SubResource("CapsuleShape3D_q38e3")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0372996, -0.108917, 0.208817)
+shape = SubResource("BoxShape3D_gdfdj")
 
 [node name="DetectionCollider" type="Area3D" parent="."]
 collision_layer = 3
