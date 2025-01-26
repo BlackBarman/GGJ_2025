@@ -10,7 +10,7 @@ radius = 0.6
 [node name="Bullet" type="Node3D" groups=["PlayerBullet"]]
 script = ExtResource("1_3t4ks")
 bullet_speed = 100.0
-friendly_damage = 0.01
+friendly_damage = 0.1
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -29,6 +29,7 @@ mesh = SubResource("SphereMesh_2bicn")
 unique_name_in_owner = true
 wait_time = 3.0
 
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

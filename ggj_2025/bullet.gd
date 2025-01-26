@@ -22,10 +22,17 @@ func _on_area_3d_body_entered(body):
 		queue_free()
 	elif body.get_parent().is_in_group("BubbleBaseGroup"):
 		body.get_parent()._decrease_size(friendly_damage)
-		queue_free()
 	elif body.get_parent().is_in_group("BubbleBullet"):
 		body.get_parent()._explode()
 		queue_free()
 
+
+
 func _on_timer_timeout() -> void:
 	queue_free()
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area.is_in_group("BubbleBaseGroup"):
+		print("ciao")
+	pass # Replace with function body.
