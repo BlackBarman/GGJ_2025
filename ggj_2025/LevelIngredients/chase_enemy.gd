@@ -1,6 +1,7 @@
 extends CharacterBody3D
 @export var damage_to_bubble = 10
 @export var nav_speed = 2
+@export var nav_speed_player = 5
 @export var follow_player = false
 @export var enemy_base_score : float = 100
 var target_bubble = null
@@ -67,7 +68,7 @@ func _physics_process(delta: float) -> void:
 		var current_location = global_transform.origin
 		var next_location = nav_agent.target_position 
 		look_at(next_location)
-		var new_velocity = (next_location - current_location).normalized() *nav_speed
+		var new_velocity = (next_location - current_location).normalized() *nav_speed_player
 		velocity = new_velocity 
 		move_and_slide()
 	

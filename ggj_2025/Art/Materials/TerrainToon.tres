@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dqamtdx4suga4"]
+
+[ext_resource type="Texture2D" uid="uid://cw5rc2d0jb2j3" path="res://Art/Textures/Terrain.png" id="1_6n13l"]
+
+[resource]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_6n13l")
+metallic_specular = 0.0
+roughness = 0.0
+uv1_scale = Vector3(10, 10, 10)
+uv1_triplanar = true
+texture_filter = 0
