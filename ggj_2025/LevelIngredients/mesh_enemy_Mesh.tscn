@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://lg4uwisgtca7"]
+
+[ext_resource type="PackedScene" uid="uid://dfsbki5xhuuy5" path="res://Mesh_Enemy.gltf" id="1_sgmue"]
+
+[node name="Mesh_Enemy" instance=ExtResource("1_sgmue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.442847, 0.972116)
+
+[node name="Skeleton3D" parent="Rootctr" index="0"]
+bones/0/position = Vector3(-0.00381191, 0.670906, -0.0648066)
+bones/0/rotation = Quaternion(-0.11085, 0, 0, 0.993837)
+bones/2/rotation = Quaternion(0, 0.955439, 0, 0.295188)
+bones/9/rotation = Quaternion(0.237723, 0.61581, 0.667159, 0.345203)
+bones/11/rotation = Quaternion(0.90654, 0, 0.422119, 0)
+bones/11/scale = Vector3(1, 1, 1)
+bones/13/rotation = Quaternion(0, 0.969062, 0, -0.246819)
+bones/15/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(0, 0.0415468, 0, 0.999137)
+bones/19/rotation = Quaternion(0.170455, 0.649735, 0.68761, 0.275649)
+bones/19/scale = Vector3(1, 1, 1)
+bones/21/rotation = Quaternion(0.885387, 0, 0.464854, 0)
+bones/23/rotation = Quaternion(0, 0.923907, 0, -0.382616)
+bones/23/scale = Vector3(1, 1, 1)
+bones/25/scale = Vector3(1, 1, 1)
+bones/27/rotation = Quaternion(0, 0.0829926, 0, 0.99655)
