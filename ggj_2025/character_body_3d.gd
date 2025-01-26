@@ -63,12 +63,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-#func _on_area_3d_body_entered(body: Node3D) -> void:
-	#if body.is_in_group("EnemyGroup"):
-		#lives -= 1
-		#print("ahiwa che male! vite rimaste: "+ str(lives))
-		#if lives == 0 :
-			#queue_free()
 
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
@@ -76,9 +70,6 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 		lives -= 1
 		AudioManager.PlayerHurt.play()
 		print("ahiwa che male! vite rimaste: "+ str(lives))
-	elif area.is_in_group("ExplosionGroup"):
-		AudioManager.PlayerHurt.play()
-		lives -= area.get_owner().explosion_player_damage
 	if lives <= 0 :
 		AudioManager.PlayerDeath.play()
 		SignalBus.PlayerDied.emit()

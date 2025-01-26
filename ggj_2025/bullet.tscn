@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://fago7sqegwx7"]
+[gd_scene load_steps=5 format=3 uid="uid://fago7sqegwx7"]
 
 [ext_resource type="Script" path="res://bullet.gd" id="1_3t4ks"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5s22x"]
 radius = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya3tj"]
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0.0754599, 0.512895, 0.907081, 1)
+emission_energy_multiplier = 16.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_2bicn"]
 
@@ -20,7 +26,8 @@ transform = Transform3D(0.991439, 0, 0, 0, 0.991439, 0, 0, 0, 0.991439, 0.008363
 shape = SubResource("SphereShape3D_5s22x")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.065749, 0.101186, 0.00590044)
+material_override = SubResource("StandardMaterial3D_ya3tj")
 mesh = SubResource("SphereMesh_2bicn")
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]

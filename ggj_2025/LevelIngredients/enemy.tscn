@@ -39,8 +39,6 @@ shape = SubResource("SphereShape3D_j3jo5")
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -0.0126564, 0)
 script = ExtResource("3_dnpua")
 
-[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
-
 [node name="Skeleton3D" parent="Mesh_Enemy/Rootctr" index="0"]
 bones/0/position = Vector3(0, 0.647116, 0)
 bones/0/rotation = Quaternion(0.0557429, 0, 0, 0.998445)
@@ -51,5 +49,7 @@ bones/13/rotation = Quaternion(0, 0.939505, 0, -0.342535)
 bones/19/rotation = Quaternion(0.449978, 0.609903, 0.546772, 0.355779)
 bones/21/rotation = Quaternion(0.892152, 0, 0.451735, 0)
 bones/23/rotation = Quaternion(0, 0.939939, 0, -0.341343)
+
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
 
 [editable path="Mesh_Enemy"]
