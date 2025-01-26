@@ -1,7 +1,8 @@
 extends CharacterBody3D
 @export var damage_to_bubble = 10
 @export var nav_speed = 2
-@export var follow_player =false
+@export var follow_player = false
+@export var enemy_base_score : float = 100
 var target_bubble = null
 @onready var nav_agent = $NavigationAgent3D
 var following_player=false

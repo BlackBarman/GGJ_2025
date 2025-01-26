@@ -11,7 +11,7 @@ var bullet_dir : Vector3
 @export var explosion_player_damage : int = 3
 @export var explosion_base_bubble_damage : float = 0.4
 
-@export var bullet_speed : float = 15
+@export var bullet_speed : float = 3
 
 var exploding = false
 
@@ -52,6 +52,8 @@ func _explode():
 func _on_explosion_area_area_entered(area: Area3D) -> void:
 	if exploding == true:
 		if area.is_in_group("EnemyCollisionGroup"):
+			print(area.get_owner().position)
+			SignalBus.EnemyDiedInExplosion.emit(area.get_owner().enemy_base_score, area.global_position)
 			area.get_owner()._die()
 		if area.is_in_group("BubbleBaseGroup"):
 			area.get_owner()._decrease_size(explosion_base_bubble_damage)

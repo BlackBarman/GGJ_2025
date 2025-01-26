@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcwk3euyqx3hg"]
+
+[ext_resource type="Script" path="res://enemy_score_popup.gd" id="1_76kbj"]
+[ext_resource type="AudioStream" uid="uid://carg6hwr0dwjl" path="res://Sounds/647977__cloud-10__8-bit-coin-or-power-up-fx-for-retro-video-games_shortened.wav" id="2_se5ka"]
+
+[node name="EnemyScorePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_76kbj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.0179491, 0.0148254, 0.000412105, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 35
+text = "+0"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_se5ka")
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
