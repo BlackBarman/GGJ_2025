@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwuvt75nv5h" path="res://Art/sandTexture.png" id="6_ihoce"]
 [ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
-[ext_resource type="Material" uid="uid://dqamtdx4suga4" path="res://Art/Materials/TerrainToon.tres" id="8_6asjj"]
+[ext_resource type="Material" path="res://Art/Materials/TerrainToon.tres" id="8_6asjj"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 [ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/camera_3d_texel_snapped3.gd" id="11_qwil3"]
 [ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/display2.gd" id="12_4p5wp"]

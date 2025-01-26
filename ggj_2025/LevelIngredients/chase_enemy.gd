@@ -30,11 +30,12 @@ func _get_new_bubble():
 
 
 func _process(delta: float) -> void:
-	if $Area3D.has_overlapping_areas():
-		for i in $Area3D.get_overlapping_areas() :
-			if i.is_in_group("PlayerBullet"):
-				queue_free()
-			pass
+	if $Area3D != null:
+		if $Area3D.has_overlapping_areas():
+			for i in $Area3D.get_overlapping_areas() :
+				if i.is_in_group("PlayerBullet"):
+					queue_free()
+				pass
 
 func _physics_process(delta: float) -> void:	
 	if nav_agent.is_target_reachable():
@@ -56,8 +57,9 @@ func _physics_process(delta: float) -> void:
 		rotation.z =0
 		var distance_to_bubble = nav_agent.distance_to_target()
 		
-		if distance_to_bubble - 0.9 < bubble_size.x:
-			velocity = Vector3(0,0,0)  
+		if distance_to_bubble-1  < bubble_size.x:	
+			if distance_to_bubble -0.5  < bubble_size.x:
+				velocity = Vector3(0,0,0)  
 			target_bubble._decrease_size(delta/damage_to_bubble)
 		else:
 			var new_velocity = (next_location - current_location).normalized() *nav_speed

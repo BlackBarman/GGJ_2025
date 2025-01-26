@@ -42,7 +42,7 @@ transform = Transform3D(-0.00249795, -0.00400287, 0.999989, 0.00218327, 0.99999,
 visible = false
 
 [node name="Mesh_Enemy" parent="." instance=ExtResource("3_wg4sq")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -0.0126564, 0)
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, -0.439357, 0)
 script = ExtResource("4_gxrsl")
 
 [node name="Skeleton3D" parent="Mesh_Enemy/Rootctr" index="0"]
