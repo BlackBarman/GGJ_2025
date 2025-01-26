@@ -1,0 +1,207 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Pebles_01",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Pebles_01Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Pebles_01Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 132,
+            "max": [
+                79
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Pebles_01Shape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 80,
+            "max": [
+                0.7371522784233093,
+                0.9957362413406372,
+                0.6231801509857178
+            ],
+            "min": [
+                -0.7128286957740784,
+                -1.0,
+                -0.7167578935623169
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Pebles_01Shape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 960,
+            "componentType": 5126,
+            "count": 80,
+            "max": [
+                0.4080863893032074,
+                0.08621495962142945,
+                0.2700843811035156
+            ],
+            "min": [
+                -0.30275678634643557,
+                0.0,
+                -0.4321646690368653
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Pebles_01Shape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 80,
+            "max": [
+                0.14082202315330506,
+                0.7245084643363953,
+                -0.3282794058322907,
+                1.0
+            ],
+            "min": [
+                -0.5190885663032532,
+                -0.7959390878677368,
+                -0.9931623339653016,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Pebles_01Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 80,
+            "max": [
+                0.11767423152923584,
+                0.18080192804336549
+            ],
+            "min": [
+                0.06845822185277939,
+                0.13613831996917725
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_Pebbles_01/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 3840,
+            "byteLength": 264,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_Pebbles_01/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 1280,
+            "byteLength": 1920,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Pebbles_01/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 1280,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Pebbles_01/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 3200,
+            "byteLength": 640,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_Pebbles_01/data",
+            "byteLength": 4104,
+            "uri": "Mesh_Pebbles_010.bin"
+        }
+    ]
+}

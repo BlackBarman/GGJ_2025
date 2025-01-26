@@ -1,0 +1,207 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "SandBags_01",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "SandBags_01Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "SandBags_01Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 9180,
+            "max": [
+                1812
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "SandBags_01Shape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1813,
+            "max": [
+                0.9998212456703186,
+                0.9999994039535524,
+                0.9998915195465088
+            ],
+            "min": [
+                -0.99994957447052,
+                -0.9999992847442628,
+                -0.9998750686645508
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "SandBags_01Shape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 21756,
+            "componentType": 5126,
+            "count": 1813,
+            "max": [
+                0.6755832433700562,
+                0.82088303565979,
+                1.2879266738891602
+            ],
+            "min": [
+                -0.6934195756912231,
+                -0.07124757766723633,
+                -1.4422197341918946
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "SandBags_01Shape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1813,
+            "max": [
+                0.9999991059303284,
+                0.34224933385849,
+                0.5419939160346985,
+                1.0
+            ],
+            "min": [
+                -0.9997162222862244,
+                -0.3624935150146485,
+                -0.9999926686286926,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "SandBags_01Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1813,
+            "max": [
+                0.1059456467628479,
+                0.9963616728782654
+            ],
+            "min": [
+                0.006268683820962906,
+                0.7873865962028503
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_SandBags_01/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 87024,
+            "byteLength": 18360,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_SandBags_01/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 29008,
+            "byteLength": 43512,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_SandBags_01/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 29008,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_SandBags_01/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 72520,
+            "byteLength": 14504,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_SandBags_01/data",
+            "byteLength": 105384,
+            "uri": "Mesh_SandBags_010.bin"
+        }
+    ]
+}

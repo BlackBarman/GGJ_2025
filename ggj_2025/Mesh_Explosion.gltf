@@ -1,0 +1,223 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Explosion",
+            "children": [
+                1
+            ],
+            "translation": [
+                -0.0723273754119873,
+                -0.008198469877243042,
+                0.03033387660980225
+            ]
+        },
+        {
+            "name": "Explosion:PIV",
+            "mesh": 0,
+            "translation": [
+                0.0723273754119873,
+                0.008198469877243042,
+                -0.03033387660980225
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Explosion2Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "M_Trimsheet_Basecolors",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "Trimsheet_BaseColors.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9728,
+            "minFilter": 9728,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Explosion2Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 4560,
+            "max": [
+                959
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Explosion2Shape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 960,
+            "max": [
+                0.9999998807907105,
+                1.0,
+                0.9999998807907105
+            ],
+            "min": [
+                -0.9999998807907105,
+                -0.999987781047821,
+                -0.9999998807907105
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Explosion2Shape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 11520,
+            "componentType": 5126,
+            "count": 960,
+            "max": [
+                0.9276727437973024,
+                0.9917953610420228,
+                1.0303280353546145
+            ],
+            "min": [
+                -1.0723274946212769,
+                -1.0081923007965088,
+                -0.9696602821350098
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Explosion2Shape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 960,
+            "max": [
+                1.0,
+                0.08349780738353729,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.0832623690366745,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Explosion2Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 960,
+            "max": [
+                0.1868043541908264,
+                0.4705674052238465
+            ],
+            "min": [
+                0.09487059712409972,
+                0.4082258343696594
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_Explosion/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 46080,
+            "byteLength": 9120,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_Explosion/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 15360,
+            "byteLength": 23040,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Explosion/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 15360,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Explosion/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 38400,
+            "byteLength": 7680,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_Explosion/data",
+            "byteLength": 55200,
+            "uri": "Mesh_Explosion0.bin"
+        }
+    ]
+}

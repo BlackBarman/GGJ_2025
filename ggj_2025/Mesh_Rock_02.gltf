@@ -1,0 +1,175 @@
+{
+    "asset": {
+        "copyright": "(C)2025 info",
+        "generator": "maya2glTF v1.5.2 fc60fee",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Rock_02",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Rock_Shape2",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {}
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Rock_Shape2#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 72,
+            "max": [
+                49
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Rock_Shape2#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 50,
+            "max": [
+                0.9807320237159728,
+                0.97348952293396,
+                0.9486256837844848
+            ],
+            "min": [
+                -0.9088663458824158,
+                -1.0,
+                -0.989314615726471
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Rock_Shape2#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 600,
+            "componentType": 5126,
+            "count": 50,
+            "max": [
+                0.5455600619316101,
+                0.4970258474349976,
+                0.5462291836738586
+            ],
+            "min": [
+                -0.28953611850738528,
+                0.0,
+                -0.3502560257911682
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Rock_Shape2#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 50,
+            "max": [
+                1.0,
+                0.1498998999595642,
+                0.9233846068382264,
+                1.0
+            ],
+            "min": [
+                -0.44561535120010378,
+                -0.3077520728111267,
+                -0.9891964197158814,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Rock_Shape2#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 50,
+            "max": [
+                0.8757570385932922,
+                0.9980079531669616
+            ],
+            "min": [
+                0.001748017966747284,
+                0.0019919280894100668
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Mesh_Rock_02/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 2400,
+            "byteLength": 144,
+            "target": 34963
+        },
+        {
+            "name": "Mesh_Rock_02/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 800,
+            "byteLength": 1200,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Rock_02/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 800,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Mesh_Rock_02/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 2000,
+            "byteLength": 400,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Mesh_Rock_02/data",
+            "byteLength": 2544,
+            "uri": "Mesh_Rock_020.bin"
+        }
+    ]
+}

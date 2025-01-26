@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwuvt75nv5h" path="res://Art/sandTexture.png" id="6_ihoce"]
 [ext_resource type="PackedScene" uid="uid://c55d1hd8xdqse" path="res://LevelIngredients/enemy_manager.tscn" id="7_0sfro"]
 [ext_resource type="AudioStream" uid="uid://0kr4fh1mbmjt" path="res://Sounds/411462__thebuilder15__bubble-pop.wav" id="8_3opmy"]
-[ext_resource type="Material" path="res://Art/Materials/TerrainToon.tres" id="8_6asjj"]
+[ext_resource type="Material" uid="uid://dqamtdx4suga4" path="res://Art/Materials/TerrainToon.tres" id="8_6asjj"]
 [ext_resource type="Script" path="res://Levels/bubble_popping.gd" id="9_f8ko0"]
 [ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/camera_3d_texel_snapped3.gd" id="11_qwil3"]
 [ext_resource type="Script" path="res://LevelIngredients/PixelShader/part03/display2.gd" id="12_4p5wp"]
@@ -102,7 +102,7 @@ stream = ExtResource("8_3opmy")
 script = ExtResource("9_f8ko0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.972684, -0.232059, -0.00582189, -0.100929, -0.445364, 0.889643, -0.209043, -0.864754, -0.45662, 1.19252, 4.48798, -5.65305)
+transform = Transform3D(0.911583, -0.0338625, 0.40972, -0.407077, -0.213725, 0.888037, 0.0574963, -0.976307, -0.208613, 1.19252, 4.48798, -5.65305)
 shadow_enabled = true
 
 [node name="Walls" type="StaticBody3D" parent="."]

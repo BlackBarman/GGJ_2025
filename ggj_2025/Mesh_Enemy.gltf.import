@@ -1840,7 +1840,7 @@ _subresources={
 },
 "lambert2": {
 "use_external/enabled": true,
-"use_external/path": "res://Art/Materials/BaseToon.tres"
+"use_external/path": "res://Art/Materials/transparantBaseToon.tres"
 }
 },
 "nodes": {
