@@ -83,8 +83,7 @@ theme_override_font_sizes/font_size = 14
 text = "Bubble Base X 1.0"
 
 [node name="BubbleBase1Size" type="ProgressBar" parent="VBoxContainer/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(120, 15)
+custom_minimum_size = Vector2(120, 10)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
@@ -108,8 +107,7 @@ text = "Bubble Base 2 x 1.0
 "
 
 [node name="BubbleBase2Size" type="ProgressBar" parent="VBoxContainer/VBoxContainer2"]
-visible = false
-custom_minimum_size = Vector2(120, 15)
+custom_minimum_size = Vector2(120, 10)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
@@ -133,8 +131,7 @@ text = "Bubble Base 3 x 1.0
 "
 
 [node name="BubbleBase3Size" type="ProgressBar" parent="VBoxContainer/VBoxContainer3"]
-visible = false
-custom_minimum_size = Vector2(120, 15)
+custom_minimum_size = Vector2(120, 10)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_gmecw")
