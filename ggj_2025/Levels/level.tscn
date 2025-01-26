@@ -27,6 +27,7 @@ size = Vector3(1, 13.9551, 61.3906)
 viewport_path = NodePath("SubViewport")
 
 [node name="MainLevel" type="Node3D" node_paths=PackedStringArray("bubble_bases")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0501337, 0.0542507, -0.322131)
 script = ExtResource("1_7dfin")
 bubble_bases = [NodePath("BubbleBase"), NodePath("BubbleBase2"), NodePath("BubbleBase3")]
 
@@ -36,10 +37,10 @@ visible = false
 texture = ExtResource("1_50b8p")
 
 [node name="BubbleBase" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71992, -0.500055, -6.82109)
 
 [node name="BubbleBase2" parent="." instance=ExtResource("4_rhv53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60967, -0.5, 5.77081)
 
 [node name="BubbleBase3" parent="." instance=ExtResource("4_rhv53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16595, -0.623795, -4.19299)

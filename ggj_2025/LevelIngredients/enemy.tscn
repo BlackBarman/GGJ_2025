@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dvbcpyo2wiwqo" path="res://Art/Blockout/Mesh_TestEnemy.gltf" id="2_ep0hf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q38e3"]
+radius = 0.902715
+height = 2.24095
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j3jo5"]
 
@@ -13,7 +15,7 @@ script = ExtResource("1_qdhtq")
 [node name="Area3D" type="Area3D" parent="." groups=["EnemyCollisionGroup"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622102, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0758578, 0.689389, 0.0145397)
 shape = SubResource("CapsuleShape3D_q38e3")
 
 [node name="DetectionCollider" type="Area3D" parent="."]

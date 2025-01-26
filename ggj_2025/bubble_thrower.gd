@@ -20,11 +20,11 @@ func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ui_launch_bubble") && can_shoot && current_bubble_bullets < max_bubble_bullets:
 		var new_bubble_bullet = bubble_bullet.instantiate() as BubbleBullet
+		get_tree().root.add_child(new_bubble_bullet)
 		new_bubble_bullet.global_position = bubble_spawn_point.global_position
 		
 		new_bubble_bullet.bullet_dir = (bubble_spawn_point.global_position - bubble_spawn_point_2.global_position).normalized()
 		new_bubble_bullet.bullet_dir.y = 0
-		get_tree().root.add_child(new_bubble_bullet)
 		can_shoot = false
 		current_bubble_bullets += 1
 		AudioManager.BubbleUp.play()
