@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccwkw3gk2obrk"]
+[gd_scene load_steps=10 format=3 uid="uid://ccwkw3gk2obrk"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_beiag"]
 [ext_resource type="Script" path="res://weapon.gd" id="2_ery3h"]
 [ext_resource type="PackedScene" uid="uid://fago7sqegwx7" path="res://bullet.tscn" id="3_hb4xm"]
 [ext_resource type="PackedScene" uid="uid://c6xnb60rqwatj" path="res://bubble_thrower.tscn" id="4_2jctd"]
 [ext_resource type="PackedScene" uid="uid://bgvc0dy04tkvo" path="res://Tank.gltf" id="5_xokrd"]
-[ext_resource type="PackedScene" uid="uid://cqe7wxyus1eu7" path="res://LevelIngredients/chase_enemy.tscn" id="6_myp56"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a8dag"]
 
@@ -69,9 +68,6 @@ transform = Transform3D(-0.799512, -0.0164856, 0.030797, -0.0123868, 0.999352, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00100327, 0.0624454, -0.04425)
 shape = SubResource("BoxShape3D_igwpj")
-
-[node name="ChaseEnemy" parent="." instance=ExtResource("6_myp56")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.581098, 0.0468259, -6.22793)
 
 [connection signal="timeout" from="body/Weapon/Timer" to="body/Weapon" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
