@@ -59,9 +59,9 @@ camera = NodePath("../SubViewport/Camera3D")
 cast_camera = NodePath("../castCamera")
 
 [node name="castCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, -3, 14, 0)
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 21.9307, 0)
 projection = 1
-size = 6.303
+size = 15.028
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
@@ -70,6 +70,7 @@ render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" node_paths=PackedStringArray("character", "main_level")]
 transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, -3, 14, 0)
+visible = false
 projection = 1
 current = true
 size = 10.0
@@ -142,6 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.84448, 1.35175)
 size = Vector3(1, 12.689, 70.5931)
 
 [node name="Display" type="Control" parent="." node_paths=PackedStringArray("viewport")]
+visible = false
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
