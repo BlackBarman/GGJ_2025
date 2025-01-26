@@ -33,7 +33,7 @@ stream = ExtResource("6_gccm8")
 
 [node name="BigExplosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_rlibg")
-volume_db = -10.0
+volume_db = -15.0
 
 [node name="BubbleBaseDamaged" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_c5tsn")

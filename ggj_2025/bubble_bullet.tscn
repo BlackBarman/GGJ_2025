@@ -34,6 +34,7 @@ height = 0.2
 script = ExtResource("1_0s537")
 max_size = 10.0
 size_change_speed = 3.0
+bullet_speed = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_lpc63")
@@ -57,4 +58,9 @@ shape = SubResource("CylinderShape3D_50hqx")
 visible = false
 mesh = SubResource("SphereMesh_e2tra")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="area_entered" from="ExplosionArea" to="." method="_on_explosion_area_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
