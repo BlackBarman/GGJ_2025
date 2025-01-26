@@ -1,9 +1,16 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal BubbleBasePopped(bubble_base : BubbleBase)
+@warning_ignore("unused_signal")
 signal BubbleBulletSent()
+@warning_ignore("unused_signal")
 signal BubbleBulletPopped()
+@warning_ignore("unused_signal")
 signal PlayerDied()
+@warning_ignore("unused_signal")
 signal MaxBubbleBulletsSet(bubble_bullets : int)
+@warning_ignore("unused_signal")
 signal PlayerHealthChanged(new_value : int, max_value : int)
+@warning_ignore("unused_signal")
 signal EnemyDiedInExplosion(enemy_score : int, enemy_position : Vector3)

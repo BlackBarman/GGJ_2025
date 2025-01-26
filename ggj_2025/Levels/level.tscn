@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbkid55m6imlg"]
+[gd_scene load_steps=17 format=3 uid="uid://dbkid55m6imlg"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_7dfin"]
 [ext_resource type="Texture2D" uid="uid://df6gxirkpdbur" path="res://Art/SpaceBackground.png" id="1_50b8p"]
+[ext_resource type="PackedScene" uid="uid://dcwk3euyqx3hg" path="res://enemy_score_popup.tscn" id="2_n10ei"]
 [ext_resource type="PackedScene" uid="uid://qu7xa6wcyixa" path="res://LevelIngredients/BubbleBase.tscn" id="4_rhv53"]
 [ext_resource type="PackedScene" uid="uid://cg8dbagredl1y" path="res://user_interface.tscn" id="5_fkdie"]
 [ext_resource type="PackedScene" uid="uid://ccwkw3gk2obrk" path="res://Chara.tscn" id="6_81aot"]
@@ -30,6 +31,7 @@ viewport_path = NodePath("SubViewport")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0501337, 0.0542507, -0.322131)
 script = ExtResource("1_7dfin")
 bubble_bases = [NodePath("BubbleBase"), NodePath("BubbleBase2"), NodePath("BubbleBase3")]
+enemy_score_popup = ExtResource("2_n10ei")
 
 [node name="Blackbackground" type="Sprite3D" parent="."]
 transform = Transform3D(21.62, 0, 0, 0, -5.1492e-07, 1, 0, -11.78, -4.37114e-08, 0, -2, 0)
