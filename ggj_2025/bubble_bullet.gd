@@ -33,12 +33,13 @@ func _process(delta: float) -> void:
 			$ExplosionArea.scale.z += (explosion_growth_speed * delta)
 		else:
 			queue_free()
-	
+
+
 func _explode():
 	if exploding == false:
 		exploding = true
 		$ExplosionArea/ExplosionMesh3D.visible = true
-		AudioManager.BigExplosion.play()
+		AudioManager.BigExplosion
 		SignalBus.emit_signal("BubbleBulletPopped")
 
 

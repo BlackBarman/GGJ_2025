@@ -8,3 +8,4 @@ PLAYER HURT: Hurt_C_05 by cabled_mess -- https://freesound.org/s/350919/ -- Lice
 SHOOT BUBBLE: bubble (4).wav by Glaneur de sons -- https://freesound.org/s/104943/ -- License: Attribution 4.0
 Water Explosion by Sheyvan -- https://freesound.org/s/519008/ -- License: Creative Commons 0
 BUBBLE EXPLOSION: Heavy/Big Sci-Fi Cinematic Explosion (w/ Tail) by EvanBoyerman -- https://freesound.org/s/530885/ -- License: Attribution 3.0
+BUBBLE BEING DAMAGED (?): Bubbles, Medium, A.wav by InspectorJ -- https://freesound.org/s/271332/ -- License: Attribution 4.0

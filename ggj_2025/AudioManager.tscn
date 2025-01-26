@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkpwk03yv1u06"]
+[gd_scene load_steps=9 format=3 uid="uid://bkpwk03yv1u06"]
 
 [ext_resource type="Script" path="res://Globals/AudioManager.gd" id="1_5vccw"]
 [ext_resource type="AudioStream" uid="uid://q32pyjv2c8dr" path="res://Sounds/344312__musiclegends__laser-shoot7.wav" id="2_qufx1"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c622dkf8dei0w" path="res://Sounds/681764__supersouper__metal-barrel-hit.wav" id="4_wqjhm"]
 [ext_resource type="AudioStream" uid="uid://crd2ka3y28gso" path="res://Sounds/104943__glaneur-de-sons__bubble-4.wav" id="6_gccm8"]
 [ext_resource type="AudioStream" uid="uid://kr4i0ihtsdj7" path="res://Sounds/530885__evanboyerman__heavybig-sci-fi-cinematic-explosion-w-tail.wav" id="7_rlibg"]
+[ext_resource type="AudioStream" uid="uid://cs5oer6op2v6s" path="res://Sounds/271332__inspectorj__bubbles-medium-a_super_shortened.wav" id="8_c5tsn"]
 
 [node name="Node2D" type="Node"]
 script = ExtResource("1_5vccw")
@@ -34,7 +35,10 @@ stream = ExtResource("6_gccm8")
 stream = ExtResource("7_rlibg")
 volume_db = -10.0
 
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+[node name="BubbleBaseDamaged" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_c5tsn")
+volume_db = -30.0
+max_polyphony = 3
 
 [node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="."]
 

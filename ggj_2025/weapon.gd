@@ -29,6 +29,7 @@ func shoot():
 		bull.bullet_dir = (front_spawn.global_position - back_spawn.global_position).normalized()
 		bull.bullet_dir.y = 0
 		AudioManager.Gunshot.play()
+		AudioManager.Gunshot.pitch_scale = 1 + AudioManager.rng.randf_range(-0.1, 0.1)
 		can_shoot = false
 		$Timer.start()
 		

@@ -16,6 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	_increase_size(delta)
+	_manage_audio()
 
 
 func _increase_size(delta: float) -> void: 
@@ -29,6 +30,9 @@ func _decrease_size(damage : float) -> void:
 	scale.x -= damage
 	scale.y -= damage
 	scale.z -= damage
+	if AudioManager.BubbleBaseDamaged.playing == false:
+		AudioManager.BubbleBaseDamaged.play()
+		AudioManager.BubbleBaseDamaged.pitch_scale = 1 + AudioManager.rng.randf_range(-0.1, 0.1)
 	if scale.x <= min_size:
 		_die()
 
@@ -36,3 +40,7 @@ func _decrease_size(damage : float) -> void:
 func _die() -> void:
 	SignalBus.BubbleBasePopped.emit(self)
 	queue_free()
+
+
+func _manage_audio():
+	pass
