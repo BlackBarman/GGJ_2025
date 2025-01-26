@@ -38,11 +38,12 @@ func _explode():
 	if exploding == false:
 		exploding = true
 		$ExplosionArea/ExplosionMesh3D.visible = true
+		AudioManager.BigExplosion.play()
 		SignalBus.emit_signal("BubbleBulletPopped")
 
 
 func _on_explosion_area_area_entered(area: Area3D) -> void:
 	if area.is_in_group("EnemyCollisionGroup"):
-		area.get_owner().queue_free()
+		area.get_owner()._die()
 	if area.is_in_group("BubbleBaseGroup"):
 		area.get_owner()._decrease_size(explosion_base_bubble_damage)

@@ -69,15 +69,17 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		print("ahiwa che male! vite rimaste: "+ str(lives))
 		if lives == 0 :
 			queue_free()
-	pass # Replace with function body.
 
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("EnemyCollisionGroup"):
 		lives -= 1
-		print("ahiwa che male! vite rimaste: "+ str(lives))
+		AudioManager.PlayerHurt.play()
+		#print("ahiwa che male! vite rimaste: "+ str(lives))
 	elif area.is_in_group("ExplosionGroup"):
+		AudioManager.PlayerHurt.play()
 		lives -= area.get_owner().explosion_player_damage
 	if lives <= 0 :
+		AudioManager.PlayerDeath.play()
 		SignalBus.PlayerDied.emit()
 		queue_free()

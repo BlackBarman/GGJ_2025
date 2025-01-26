@@ -72,3 +72,8 @@ func _on_detection_collider_body_entered(body: Node3D) -> void:
 			following_player =true
 			target_bubble =body
 			update_target_location(body.global_position)
+
+
+func _die():
+	AudioManager.SmallBoom.play()
+	queue_free()

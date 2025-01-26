@@ -18,7 +18,7 @@ func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("EnemyGroup"):
-		body.queue_free()
+		body._die()
 		queue_free()
 	elif body.get_parent().is_in_group("BubbleBaseGroup"):
 		body.get_parent()._decrease_size(friendly_damage)

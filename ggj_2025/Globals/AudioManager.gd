@@ -5,3 +5,8 @@ extends Node
 ## ie : AudioManager.BuildTower.play() (from any script)
 
 @onready var Gunshot = $Gunshot
+@onready var SmallBoom = $SmallBoom
+@onready var PlayerHurt = $PlayerHurt
+@onready var PlayerDeath = $PlayerDeath
+@onready var BubbleUp = $BubbleUp
+@onready var BigExplosion = $BigExplosion

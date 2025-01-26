@@ -27,6 +27,7 @@ func _process(_delta: float) -> void:
 		get_tree().root.add_child(new_bubble_bullet)
 		can_shoot = false
 		current_bubble_bullets += 1
+		AudioManager.BubbleUp.play()
 		SignalBus.BubbleBulletSent.emit()
 		$Cooldown.start()
 
