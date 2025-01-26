@@ -47,6 +47,7 @@ func _score_enemy_exploded(enemy_base_score : int, enemy_position : Vector3):
 	score += enemy_base_score*_calculate_bubble_score_modifier()
 	var pop_up = enemy_score_popup.instantiate() as EnemyScorePopUp
 	$UserInterface.add_child(pop_up)
+	@warning_ignore("narrowing_conversion")
 	pop_up._set_score(enemy_base_score*_calculate_bubble_score_modifier())
 	pop_up.world_position = enemy_position
 	

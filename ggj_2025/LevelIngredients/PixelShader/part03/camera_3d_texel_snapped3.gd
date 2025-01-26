@@ -22,9 +22,9 @@ func _ready() -> void:
 	RenderingServer.frame_post_draw.connect(_snap_objects_revert)
 	make_current()
 
-func _process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if main_level.game_over == false:
-		var new_position2 = global_position.lerp(character.global_position, speed*_delta)
+		var new_position2 = global_position.lerp(character.global_position, speed*delta)
 		global_position.x = new_position2.x
 		global_position.z = new_position2.z
 		$"../../castCamera".global_position.x = new_position2.x
@@ -62,6 +62,49 @@ func _snap_objects() -> void:
 		var snap_space_pos := pos * _snap_space
 		var snapped_snap_space_pos := snap_space_pos.snapped(Vector3(_texel_size, _texel_size, 0.0))
 		node.global_position = _snap_space * snapped_snap_space_pos
+
+
+#func _process(_delta: float) -> void:
+	#if main_level.game_over == false:
+		#
+		#var new_position2 = global_position.lerp(character.global_position, speed*_delta)
+		#global_position.x = new_position2.x
+		#global_position.z = new_position2.z
+		#$"../../castCamera".global_position.x = new_position2.x
+		#$"../../castCamera".global_position.z = new_position2.z
+	## rotation changes the snap space
+	#if global_rotation != _prev_rotation:
+		#_prev_rotation = global_rotation
+		#_snap_space = global_transform
+	#_texel_size = size / float((get_viewport() as SubViewport).size.y)
+	## camera position in snap space
+	#var snap_space_position := global_position * _snap_space
+	## snap!
+	#var snapped_snap_space_position := snap_space_position.snapped(Vector3.ONE * _texel_size)
+	## how much we snapped (in snap space)
+	#var snap_error := snapped_snap_space_position - snap_space_position
+	#if snap:
+		## apply camera offset as to not affect the actual transform
+		#h_offset = snap_error.x
+		#v_offset = snap_error.y
+		## error in screen texels (will be used later)
+		#texel_error = Vector2(snap_error.x, -snap_error.y) / _texel_size
+		#if snap_objects:
+			#_snap_objects.call_deferred()
+	#else:
+		#texel_error = Vector2.ZERO
+##
+##
+##func _snap_objects() -> void:
+	##_snap_nodes = get_tree().get_nodes_in_group("snap")
+	##_pre_snapped_positions.resize(_snap_nodes.size())
+	##for i in _snap_nodes.size():
+		##var node := _snap_nodes[i] as Node3D
+		##var pos := node.global_position
+		##_pre_snapped_positions[i] = pos
+		##var snap_space_pos := pos * _snap_space
+		##var snapped_snap_space_pos := snap_space_pos.snapped(Vector3(_texel_size, _texel_size, 0.0))
+		##node.global_position = _snap_space * snapped_snap_space_pos
 
 
 func _snap_objects_revert() -> void:
