@@ -8,4 +8,6 @@ metallic_specular = 0.0
 rim_enabled = true
 rim = 0.1
 rim_tint = 1.0
+clearcoat_enabled = true
+clearcoat_roughness = 0.15
 refraction_scale = -1.0
