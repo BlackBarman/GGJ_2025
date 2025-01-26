@@ -258,7 +258,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -400.0
 offset_top = -148.0
-offset_bottom = 152.0
+offset_bottom = 198.0
 grow_horizontal = 0
 grow_vertical = 2
 color = Color(0.141176, 0.141176, 0.141176, 1)
@@ -292,8 +292,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "- shoot them with your gun to make them explode
 - the longer the bubble grows, the bigger the explosion
+- it will explode by itself after 7 seconds
 - the explosion also hurts the player and the bubble
-they have to protect"
+they have to protect
+- enemies killed by an explosions give you extra points"
 
 [node name="PlayerInfo" type="ColorRect" parent="."]
 layout_mode = 1
@@ -344,6 +346,7 @@ layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_8m1d8")
 
 [node name="Credits" type="ColorRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 1
 anchors_preset = 6
