@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccwkw3gk2obrk"]
+[gd_scene load_steps=10 format=3 uid="uid://ccwkw3gk2obrk"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_beiag"]
 [ext_resource type="Script" path="res://weapon.gd" id="2_ery3h"]
 [ext_resource type="PackedScene" uid="uid://fago7sqegwx7" path="res://bullet.tscn" id="3_hb4xm"]
 [ext_resource type="PackedScene" uid="uid://c6xnb60rqwatj" path="res://bubble_thrower.tscn" id="4_2jctd"]
+[ext_resource type="PackedScene" uid="uid://bgvc0dy04tkvo" path="res://Tank.gltf" id="5_xokrd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a8dag"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qxsh1"]
+radius = 0.0005
+height = 0.001
 
 [sub_resource type="BoxMesh" id="BoxMesh_ee17j"]
 size = Vector3(1.035, 0.265, 0.36)
@@ -36,22 +39,29 @@ bullet_spawn_pos = NodePath("MeshInstance3D/bullet_spawn_point")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="body/Weapon"]
 transform = Transform3D(1, 1.86265e-09, 0, -2.79397e-09, 1, -3.84171e-09, 0, -1.74623e-09, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_ee17j")
 skeleton = NodePath("../../..")
 
 [node name="bullet_spawn_point" type="Node3D" parent="body/Weapon/MeshInstance3D"]
 unique_name_in_owner = true
-transform = Transform3D(1, -1.51787e-05, 0.000453502, 1.51657e-05, 1, 8.32009e-06, -0.000453413, -8.29482e-06, 1, -0.648258, -0.047873, 0.0457189)
+transform = Transform3D(1, -1.51669e-05, 0.000453502, 1.51636e-05, 1, 8.31485e-06, -0.000453413, -8.29529e-06, 1, -0.878696, -0.0341759, -0.337289)
+visible = false
 
 [node name="bullet_spawn_point2" type="Node3D" parent="body/Weapon/MeshInstance3D"]
 unique_name_in_owner = true
-transform = Transform3D(1, -1.51827e-05, 0.000453504, 1.51667e-05, 1, 8.31857e-06, -0.000453416, -8.29622e-06, 1, 1.35471, -0.115988, 0.10581)
+transform = Transform3D(1, -1.51742e-05, 0.000453506, 1.51599e-05, 1, 8.31485e-06, -0.000453416, -8.29808e-06, 1, 1.12427, -0.102291, -0.277198)
+visible = false
 
 [node name="Timer" type="Timer" parent="body/Weapon"]
 wait_time = 0.2
 
 [node name="BubbleThrower" parent="body" instance=ExtResource("4_2jctd")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.399753, 0.00691921, 0.0122284)
+visible = false
+
+[node name="Tank2" parent="body" instance=ExtResource("5_xokrd")]
+transform = Transform3D(-0.799512, -0.0164856, 0.030797, -0.0123868, 0.999352, 0.0324983, -0.0250502, 0.0320016, -0.998997, 0.0156524, -0.948847, -0.0303844)
 
 [node name="Area3D" type="Area3D" parent="."]
 
