@@ -47,6 +47,9 @@ transform = Transform3D(1, -1.51787e-05, 0.000453502, 1.51657e-05, 1, 8.32009e-0
 unique_name_in_owner = true
 transform = Transform3D(1, -1.51827e-05, 0.000453504, 1.51667e-05, 1, 8.31857e-06, -0.000453416, -8.29622e-06, 1, 1.35471, -0.115988, 0.10581)
 
+[node name="Timer" type="Timer" parent="body/Weapon"]
+wait_time = 0.2
+
 [node name="BubbleThrower" parent="body" instance=ExtResource("4_2jctd")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.399753, 0.00691921, 0.0122284)
 
@@ -56,5 +59,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.3997
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00100327, 0.0624454, -0.04425)
 shape = SubResource("BoxShape3D_igwpj")
 
+[connection signal="timeout" from="body/Weapon/Timer" to="body/Weapon" method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
